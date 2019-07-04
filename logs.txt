@@ -1,0 +1,6 @@
+2019-07-03 18:43:42,251 - DEBUG - [-] Hlseven initialized [-]
+2019-07-03 18:43:42,389 - DEBUG - [-] Init MSH [-]
+2019-07-03 18:43:42,409 - DEBUG - [+] Init MSH [+]
+2019-07-03 18:43:42,416 - DEBUG - [+] Hlseven initialized [+]
+2019-07-03 18:43:42,419 - DEBUG - 
+MSH|^~\&|Nouraures Connector|NourAures|EVOLUCARE IMAGING|EVOLUCARE|YYYYMMDDHHMMSS||ORM^O01|881ce74a-edf4-4292-b20b-559c28861ba9|P|2.3.1|||NE||||||PID||dzdzdddddddd|dzdzdddddddd||||||||||||||||||||||||||||||||||||PV1||||||||||||||||||||||||||||||||||||||||||||||||||||ORC||||||||||||||||||||||||||||||OBR|||||||||||||||||||||||||||||||||||||||||||||||||
