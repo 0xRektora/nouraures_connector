@@ -1,9 +1,10 @@
 from hl7apy.core import Message
 import logging
 import uuid  # TODO REMOVE
+from utils import Singleton
 
 
-class Hlseven(Message):
+class Hlseven(Message, Singleton):
     """
     Class that'll take care of the Hlseven messages
     """

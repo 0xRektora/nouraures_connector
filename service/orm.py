@@ -1,6 +1,7 @@
 import sqlalchemy
 import logging
 import conf
+from utils import Singleton
 
 
 class Orm(Singleton):
@@ -52,6 +53,54 @@ class Orm(Singleton):
             logging.debug("\t[-] Creating table hl7_connections [-]")
             self.metadata.create_all()
             logging.debug("\t[+] hl7_connections successfully created [+]")
+
+    def get_sections(self,):
+        """
+            Returns all the sections rows
+        """
+        logging.debug("\t[+] get_sections [+]")
+        try:
+            return self.sections.select().execute()
+        except Exception as e:
+            logging.warning("\t[-] Exception occured [-]")
+            logging.warning("\t" + e)
+            logging.warning("\t[-] Exception occured [-]")
+
+    def get_examen(self, id_examen):
+        """
+            Return the examen row of the id_examen passed
+        """
+
+        logging.debug("\t[+] get_examen [+]")
+        logging.debug(f"\t[+] id_examen {id_examen} [+]")
+        try:
+            return self.examens.select().where(self.examens.columns.id_examen == id_examen).execute()
+        except Exception as e:
+            logging.warning("\t[-] Exception occured [-]")
+            logging.warning("\t" + e)
+            logging.warning("\t[-] Exception occured [-]")
+
+    def get_patient(self, id_examen):
+        """
+            Return the patient row of the id_patient passed
+        """
+
+        logging.debug("\t[+] get_patient [+]")
+        logging.debug(f"\t[+] id_examen {id_examen} [+]")
+
+        try:
+            id_patient = self.examens.select().where(self.examens.columns.id_examen == id_examen).execute()
+
+            if(id_patient):
+                return self.patients.select().where(self.patients.columns.id_patient == id_patient).execute()
+            else:
+                logging.debug(f"\t [-] Patient not found {id_patient} [-]")
+                return False
+
+        except Exception as e:
+            logging.warning("\t[-] Exception occured [-]")
+            logging.warning("\t" + e)
+            logging.warning("\t[-] Exception occured [-]")
 
 
 
