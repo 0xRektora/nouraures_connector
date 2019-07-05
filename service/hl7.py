@@ -41,9 +41,6 @@ class Hlseven(Message):
 
     def init_pid(self):
         self.add_segment("PID")
-        self.PID.pid_1 = ""
-        self.PID.pid_2 = "dzdzdddddddd"
-        self.PID.pid_3 = "dzdzdddddddd"
 
     def init_pv1(self):
         self.add_segment("PV1")
@@ -58,4 +55,4 @@ class Hlseven(Message):
 if __name__ == "__main__":
     logging.basicConfig(filename='logs.txt', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
     m = Hlseven()
-    logging.debug("\n"+m.to_mllp(trailing_children=True))
+    logging.debug("\n"+m.to_er7(trailing_children=True))

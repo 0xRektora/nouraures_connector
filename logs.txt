@@ -4,3 +4,15 @@
 2019-07-03 18:43:42,416 - DEBUG - [+] Hlseven initialized [+]
 2019-07-03 18:43:42,419 - DEBUG - 
 MSH|^~\&|Nouraures Connector|NourAures|EVOLUCARE IMAGING|EVOLUCARE|YYYYMMDDHHMMSS||ORM^O01|881ce74a-edf4-4292-b20b-559c28861ba9|P|2.3.1|||NE||||||PID||dzdzdddddddd|dzdzdddddddd||||||||||||||||||||||||||||||||||||PV1||||||||||||||||||||||||||||||||||||||||||||||||||||ORC||||||||||||||||||||||||||||||OBR|||||||||||||||||||||||||||||||||||||||||||||||||
+2019-07-04 20:45:56,537 - DEBUG - [-] Hlseven initialized [-]
+2019-07-04 20:45:56,644 - DEBUG - [-] Init MSH [-]
+2019-07-04 20:45:56,664 - DEBUG - [+] Init MSH [+]
+2019-07-04 20:45:56,667 - DEBUG - [+] Hlseven initialized [+]
+2019-07-04 20:45:56,670 - DEBUG - 
+MSH|^~\&|Nouraures Connector|NourAures|EVOLUCARE IMAGING|EVOLUCARE|YYYYMMDDHHMMSS||ORM^O01|08420a3a-818c-4bcd-98df-3d161f80c55b|P|2.3.1|||NE||||||PID|||||||||||||||||||||||||||||||||||||||PV1||||||||||||||||||||||||||||||||||||||||||||||||||||ORC||||||||||||||||||||||||||||||OBR|||||||||||||||||||||||||||||||||||||||||||||||||
+2019-07-04 20:46:33,448 - DEBUG - [-] Hlseven initialized [-]
+2019-07-04 20:46:33,522 - DEBUG - [-] Init MSH [-]
+2019-07-04 20:46:33,546 - DEBUG - [+] Init MSH [+]
+2019-07-04 20:46:33,548 - DEBUG - [+] Hlseven initialized [+]
+2019-07-04 20:46:33,551 - DEBUG - 
+MSH|^~\&|Nouraures Connector|NourAures|EVOLUCARE IMAGING|EVOLUCARE|YYYYMMDDHHMMSS||ORM^O01|8b3a59af-3690-4b29-9772-7bdd167a0e5d|P|2.3.1|||NE||||||PID|||||||||||||||||||||||||||||||||||||||PV1||||||||||||||||||||||||||||||||||||||||||||||||||||ORC||||||||||||||||||||||||||||||OBR|||||||||||||||||||||||||||||||||||||||||||||||||
