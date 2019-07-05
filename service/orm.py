@@ -13,7 +13,7 @@ class Orm(Singleton):
         """
             Init the connetcion with the database
         """
-        logging.debug("[+] Initilizing Orm [+]")
+        logging.info("[+] Initilizing Orm [+]")
 
         # If the
 
@@ -31,14 +31,14 @@ class Orm(Singleton):
         self.sections = sqlalchemy.Table("sections", self.metadata)
         self.patients = sqlalchemy.Table("patients", self.metadata)
         self.medecins = sqlalchemy.Table("medecins", self.metadata)
-        logging.debug("[+] Orm initialized [+]")
+        logging.info("[+] Orm initialized [+]")
 
     def check_table(self,):
         import datetime
         """
             Create a new table if it doest exist
         """
-        logging.debug("\t[+] Checking table hl7_connections if it exist [+]")
+        logging.info("\t[+] Checking table hl7_connections if it exist [+]")
         sqlalchemy.Table("hl7_connections", self.metadata,
                         sqlalchemy.Column(
                             "id", sqlalchemy.Integer, primary_key=True),
@@ -50,64 +50,66 @@ class Orm(Singleton):
                         )
 
         if not self.engine.has_table("hl7_connections"):
-            logging.debug("\t[-] Creating table hl7_connections [-]")
+            logging.info("\t[-] Creating table hl7_connections [-]")
             self.metadata.create_all()
-            logging.debug("\t[+] hl7_connections successfully created [+]")
+            logging.info("\t[+] hl7_connections successfully created [+]")
 
     def get_sections(self,):
         """
             Returns all the sections rows
         """
-        logging.debug("\t[+] get_sections [+]")
+        logging.info("\t[+] get_sections [+]")
         try:
             return self.sections.select().execute()
         except Exception as e:
-            logging.warning("\t[-] Exception occured [-]")
-            logging.warning("\t" + e)
-            logging.warning("\t[-] Exception occured [-]")
+            logging.critical("\t[-] Exception occured [-]")
+            logging.critical("\t" + str(e))
+            logging.critical("\t[-] Exception occured [-]")
 
     def get_examen(self, id_examen):
         """
             Return the examen row of the id_examen passed
         """
 
-        logging.debug("\t[+] get_examen [+]")
-        logging.debug(f"\t[+] id_examen {id_examen} [+]")
+        logging.info("\t[+] get_examen [+]")
+        logging.info(f"\t[+] id_examen {id_examen} [+]")
         try:
             return self.examens.select().where(self.examens.columns.id_examen == id_examen).execute()
         except Exception as e:
-            logging.warning("\t[-] Exception occured [-]")
-            logging.warning("\t" + e)
-            logging.warning("\t[-] Exception occured [-]")
+            logging.critical("\t[-] Exception occured [-]")
+            logging.critical("\t" + str(e))
+            logging.critical("\t[-] Exception occured [-]")
 
     def get_patient(self, id_examen):
         """
             Return the patient row of the id_patient passed
         """
 
-        logging.debug("\t[+] get_patient [+]")
-        logging.debug(f"\t[+] id_examen {id_examen} [+]")
+        logging.info("\t[+] get_patient [+]")
+        logging.info(f"\t[+] id_examen {id_examen} [+]")
 
         try:
-            id_patient = self.examens.select().where(self.examens.columns.id_examen == id_examen).execute()
+            # Select the row and retrieve the id
+            id_patient = list(self.examens.select().where(self.examens.columns.id_examen == id_examen).execute())[0][1]
 
             if(id_patient):
                 return self.patients.select().where(self.patients.columns.id_patient == id_patient).execute()
             else:
-                logging.debug(f"\t [-] Patient not found {id_patient} [-]")
+                logging.warning(f"\t [-] Patient not found {id_patient} [-]")
                 return False
 
         except Exception as e:
-            logging.warning("\t[-] Exception occured [-]")
-            logging.warning("\t" + e)
-            logging.warning("\t[-] Exception occured [-]")
+            logging.critical("\t[-] Exception occured [-]")
+            logging.critical("\t" + str(e))
+            logging.critical("\t[-] Exception occured [-]")
 
 
 
 if __name__ == "__main__":
     import conf
     conf.logging_state()
+    logging.debug("[+] Testing orm.py [+]")
     m = Orm()
     m.hl7_connections.insert().values(message="test").execute()
-    logging.debug(next(m.users.select().limit(10).execute()))
+    logging.debug("[+] Testing orm.py [+]")
 
