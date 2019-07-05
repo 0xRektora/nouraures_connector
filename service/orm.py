@@ -3,7 +3,7 @@ import logging
 import conf
 
 
-class Orm():
+class Orm(Singleton):
     """
         Orm Class to connect with the DB
     """
@@ -13,6 +13,8 @@ class Orm():
             Init the connetcion with the database
         """
         logging.debug("[+] Initilizing Orm [+]")
+
+        # If the
 
         self.engine = sqlalchemy.create_engine(
             f"mysql+mysqldb://{conf.DB_USER}:{conf.DB_PASSWORD}@{conf.DB_ADRESS}/{conf.DB_NAME}")
