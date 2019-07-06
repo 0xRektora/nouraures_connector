@@ -54,6 +54,13 @@ class Orm(Singleton):
             self.metadata.create_all()
             logging.info("\t[+] hl7_connections successfully created [+]")
 
+    def insertHl7Connection(self, msg):
+        """
+            Insert the string :msg: to the db
+        """
+        self.hl7_connections.insert().values(message=msg).execute()
+
+
     def get_sections(self,):
         """
             Returns all the sections rows
@@ -107,9 +114,9 @@ class Orm(Singleton):
 
 if __name__ == "__main__":
     import conf
-    conf.logging_state()
-    logging.debug("[+] Testing orm.py [+]")
+    logger = conf._init_logger(logger=conf.LOGGER_ORM, filehandler=False)
+    logger.debug("[+] Testing orm.py [+]")
     m = Orm()
-    m.hl7_connections.insert().values(message="test").execute()
-    logging.debug("[+] Testing orm.py [+]")
+    m.insertHl7Connection("test")
+    logger.debug("[+] Testing orm.py [+]")
 

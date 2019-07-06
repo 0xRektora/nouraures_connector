@@ -37,21 +37,32 @@ LOGGER_ALL = "all"
 # The current logging type for the app
 LOG_TYPE = logging.DEBUG
 
-def _init_logger(self, logger=LOGGER_ALL, filehandler=LOG_ALL, level_type=logging.debug):
+def _init_logger(logger=LOGGER_ALL, filehandler=LOG_ALL, level_type=LOG_TYPE):
         try:
+            # Init variables
             logger = logging.getLogger(logger)
+            handler = None
+            formatter = None
+
+            # Check to redirect to a file or sys.stdout
             if(filehandler):
                 handler = logging.FileHandler(filehandler)
-
-            handler.setLevel(level_type)
-            logger.addHandler(handler)
-            if(level_type == (logging.debug or logging.critical)):
-                logger.format("%(name)s - %(module)s - %(funcName)s - %(levelname)s - %(lineno)s - %(asctime)s - %(message)s")
             else:
-                logger.format("%(name)s - %(funcName)s - %(asctime)s - %(message)s")
+                handler = logging.StreamHandler(sys.stdout)
+
+            # Check the logging type to set a formatter
+            if(level_type == (logging.debug or logging.critical)):
+                formatter = logging.Formatter("%(name)s - %(module)s - %(funcName)s - %(levelname)s - %(lineno)s - %(asctime)s - %(message)s")
+            else:
+                formatter = logging.Formatter("%(name)s - %(funcName)s - %(asctime)s - %(message)s")
+
+            # Set the handler and bind it to the logger
+            handler.setLevel(level_type)
+            handler.setFormatter(formatter)
+            logger.addHandler(handler)
 
             return logger
         except Exception as e:
             with open("CRITICAL.txt", "a") as f:
-                f.writelines("Critical error happened, logger can't be initialised")
-                f.writelines("Error : ", str(e))
+                f.writelines("Critical error happened, logger can't be initialised\n")
+                f.writelines("Error : " + str(e) + "\n")
