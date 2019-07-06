@@ -28,9 +28,9 @@ class Hlseven(Message, Singleton):
         """
         logging.debug("[-] Init MSH [-]")
         self.msh.msh_1 = "|"
-        self.msh.msh_3 = "Nouraures Connector"
+        self.msh.msh_3 = "NourauresConnector"
         self.msh.msh_4 = "NourAures"
-        self.msh.msh_5 = "EVOLUCARE IMAGING"
+        self.msh.msh_5 = "EVOLUCARE"
         self.msh.msh_6 = "EVOLUCARE"
         self.msh.msh_7 = "YYYYMMDDHHMMSS"
         self.msh.msh_9 = "ORM^O01"
@@ -54,6 +54,7 @@ class Hlseven(Message, Singleton):
 
 
 if __name__ == "__main__":
-    logging.basicConfig(filename='logs.txt', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+    import conf
+    logger = conf._init_logger(logger=conf.LOGGER_HL7, filehandler=False)
     m = Hlseven()
     logging.debug("\n"+m.to_er7(trailing_children=True))

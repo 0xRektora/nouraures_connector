@@ -24,6 +24,7 @@ DB_PASSWORD = ""
     Logging setup
 """
 # Output files for the different type of logs
+LOG_INFO = "logs_info.txt"
 LOG_DEBUG = "logs_debug.txt"
 LOG_WARNING = "logs_warning.txt"
 LOG_CRITICAL = "logs_critical.txt"
@@ -45,20 +46,22 @@ def _init_logger(logger=LOGGER_ALL, filehandler=LOG_ALL, level_type=LOG_TYPE):
             formatter = None
 
             # Check to redirect to a file or sys.stdout
-            if(filehandler):
+            if filehandler:
                 handler = logging.FileHandler(filehandler)
-            else:
+            elif filehandler == None:
                 handler = logging.StreamHandler(sys.stdout)
+            else :
+                handler = logging.FileHandler(LOG_ALL)
 
             # Check the logging type to set a formatter
-            if(level_type == (logging.debug or logging.critical)):
+            if level_type == logging.DEBUG or level_type >= logging.WARNING:
                 formatter = logging.Formatter("%(name)s - %(module)s - %(funcName)s - %(levelname)s - %(lineno)s - %(asctime)s - %(message)s")
             else:
                 formatter = logging.Formatter("%(name)s - %(funcName)s - %(asctime)s - %(message)s")
 
             # Set the handler and bind it to the logger
-            handler.setLevel(level_type)
             handler.setFormatter(formatter)
+            logger.setLevel(level_type)
             logger.addHandler(handler)
 
             return logger
