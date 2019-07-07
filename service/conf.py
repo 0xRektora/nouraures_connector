@@ -18,7 +18,14 @@ DB_NAME ="nouraures"
 DB_USER = "root"
 DB_PASSWORD = ""
 
+"""
+    server.py
 
+    Server infos
+"""
+
+SERVER_IP = "localhost"
+SERVER_PORT = 8888
 
 """
     Logging setup
@@ -33,6 +40,7 @@ LOG_ALL = "logs_all.txt"
 # Loggers name to use
 LOGGER_ORM = "Orm"
 LOGGER_HL7 = "HL7"
+LOGGER_SERVER = "Server"
 LOGGER_ALL = "all"
 
 # The current logging type for the app

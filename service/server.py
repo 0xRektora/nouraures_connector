@@ -1,56 +1,78 @@
-from twisted.internet.protocol import Factory
-from twisted.protocols.basic import LineReceiver
+from twisted.internet.protocol import Factory, Protocol
+from twisted.internet.endpoints import TCP4ServerEndpoint
 from twisted.internet import reactor
+import conf, logging
 
-
-class ChatProtocol(LineReceiver):
-    def __init__(self, factory):
+class HlsevenProtocol(Protocol):
+    def __init__(self, factory, hl7_object):
+        self.logger = conf._init_logger(logger=conf.LOGGER_SERVER, filehandler=conf.LOG_DEBUG)
+        self.logger.info("[+] Initilizing Server [+]")
         self.factory = factory
-        self.name = None
-        self.state = "REGISTER"
+        self.hl7_object = hl7_object
+        self.ack_try = 5 # Number of time trying to receive the right ACK
+        self.logger.info(f"[+] Listening on {self.factory.addr} [+]")
 
     def connectionMade(self):
-        self.sendLine("What's your name?")
+        """
+            Fire up the sendHlseven function when connection is made
+        """
+        self.logger.info("[+] Connection made [+]")
+        self.sendHlseven()
 
     def connectionLost(self, reason):
-        if self.name in self.factory.users:
-            del self.factory.users[self.name]
-            self.broadcastMessage("%s has left the channel." % (self.name,))
+        """
+            Fire up when the connection is lost
+        """
+        self.logger.info(f"[+] Connection lost reason : {reason} [+]")
 
-    def lineReceived(self, line):
-        if self.state == "REGISTER":
-            self.handle_REGISTER(line)
+    def dataReceived(self, data):
+        """
+            Fire up when data is received
+        """
+
+        data = self.decodeData(data)
+        self.logger.info(f"[+] data received [+]")
+        self.logger.info(f"{data}")
+        if(data):
+            self.logger.info("[+] Cutting connection, job finished [+]")
+            self.transport.abortConnection()
         else:
-            self.handle_CHAT(line)
+            if self.ack_try == 0:
+                self.logger.critical(f"[-] 0 attempts remained, errors occured, aborting connection [-]")
+                self.transport.abortConnection()
+            self.ack_try -= 1
+            self.logger.warning(f"[-] ACK may not be what expected, {self.ack_try} attempts remained [-]")
 
-    def handle_REGISTER(self, name):
-        if name in self.factory.users:
-            self.sendLine("Name taken, please choose another.")
-            return
+    def sendHlseven(self):
+        """
+            Method called to send the HL7 message
+            turn into a er7 string encoded in byte with utf8 encoding
+        """
+        self.logger.info("[+] Sending the Hl7 object [+]")
+        self.logger.debug(f"{self.hl7_object}")
 
-        self.sendLine("Welcome, %s!" % (name,))
-        self.broadcastMessage("%s has joined the channel." % (name,))
-        self.name = name
-        self.factory.users[name] = self
-        self.state = "CHAT"
+        self.transport.write(self.encodeData(self.hl7_object.to_er7(trailing_children=True)))
 
-    def handle_CHAT(self, message):
-        message = "<%s> %s" % (self.name, message)
-        self.broadcastMessage(message)
+    def encodeData(self, data):
+        return str(data).encode("utf8")
 
-    def broadcastMessage(self, message):
-        for name, protocol in self.factory.users.iteritems():
-            if protocol != self:
-                protocol.sendLine(message)
+    def decodeData(self, data):
+        return str(data.decode("utf8"))
 
 
-class ChatFactory(Factory):
-    def __init__(self):
-        self.users = {}
+class HlsevenFactory(Factory):
+
+    def __init__(self, hl7):
+        self.hl7 = hl7
 
     def buildProtocol(self, addr):
-        return ChatProtocol(self)
+        self.addr = addr
+        return HlsevenProtocol(self, self.hl7)
 
-
-reactor.listenTCP(8000, ChatFactory())
-reactor.run()
+if __name__ == "__main__":
+    import hl7
+    hl = hl7.Hlseven()
+    endpoint = TCP4ServerEndpoint(reactor, conf.SERVER_PORT)
+    endpoint.listen(HlsevenFactory(hl))
+    print("Running server")
+    reactor.run()
