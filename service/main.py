@@ -1,4 +1,4 @@
-import conf, logging, datetime, time
+import conf, utils, logging, datetime, time
 from orm import Orm
 from hl7 import Hlseven
 import sys
@@ -9,6 +9,9 @@ TIME = time.time() # Contain the time at the start of the program
 
 logger = conf._init_logger(filehandler=conf.LOG_ALL)
 
+# Read the CSV files
+EVOLUCARE_MEDECIN = utils.readXmlFile(conf.STATIC_MEDECIN)
+EVOLUCARE_TYPES_INTERVENTION = utils.readXmlFile(conf.STATIC_TYPE_INTERVENTION)
 
 EXAMENS_ID = 10925 # TODO REMOVE
 if len(sys.argv) > 1:

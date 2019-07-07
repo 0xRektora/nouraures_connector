@@ -1,12 +1,25 @@
 """
 Simple configuration file for debugging and saving constants
 """
-import logging, sys
+import logging, sys, os
 
 """
     Date and time format
 """
 DT_FORMAT = "%Y%m%d%H%M%S"
+
+"""
+    Full actual path
+"""
+FULL_PATH = os.getcwd()
+
+"""
+    Static files data folder
+"""
+
+STATIC_MEDECIN = "/service/data/medecins.csv"
+STATIC_TYPE_INTERVENTION = "/service/data/types_intervention.csv"
+
 
 """
     orm.py
