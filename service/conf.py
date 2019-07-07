@@ -63,7 +63,7 @@ def _init_logger(logger=LOGGER_ALL, filehandler=LOG_ALL, level_type=LOG_TYPE):
 
             # Check the logging type to set a formatter
             if level_type == logging.DEBUG or level_type >= logging.WARNING:
-                formatter = logging.Formatter("%(name)s - %(module)s - %(funcName)s - %(levelname)s - %(lineno)s - %(asctime)s - %(message)s")
+                formatter = logging.Formatter("%(name)s - %(funcName)s - %(levelname)s - %(lineno)s - %(asctime)s - %(message)s")
             else:
                 formatter = logging.Formatter("%(name)s - %(funcName)s - %(asctime)s - %(message)s")
 

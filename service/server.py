@@ -4,11 +4,10 @@ from twisted.internet import reactor
 import conf, logging
 
 class HlsevenProtocol(Protocol):
-    def __init__(self, factory, hl7_object):
+    def __init__(self, factory):
         self.logger = conf._init_logger(logger=conf.LOGGER_SERVER, filehandler=conf.LOG_DEBUG)
         self.logger.info("[+] Initilizing Server [+]")
         self.factory = factory
-        self.hl7_object = hl7_object
         self.ack_try = 5 # Number of time trying to receive the right ACK
         self.logger.info(f"[+] Listening on {self.factory.addr} [+]")
 
@@ -29,7 +28,6 @@ class HlsevenProtocol(Protocol):
         """
             Fire up when data is received
         """
-
         data = self.decodeData(data)
         self.logger.info(f"[+] data received [+]")
         self.logger.info(f"{data}")
@@ -49,9 +47,9 @@ class HlsevenProtocol(Protocol):
             turn into a er7 string encoded in byte with utf8 encoding
         """
         self.logger.info("[+] Sending the Hl7 object [+]")
-        self.logger.debug(f"{self.hl7_object}")
+        self.logger.debug(f"{self.factory.hl7}")
 
-        self.transport.write(self.encodeData(self.hl7_object.to_er7(trailing_children=True)))
+        self.transport.write(self.encodeData(self.factory.hl7.to_er7(trailing_children=True)))
 
     def encodeData(self, data):
         return str(data).encode("utf8")
@@ -67,7 +65,7 @@ class HlsevenFactory(Factory):
 
     def buildProtocol(self, addr):
         self.addr = addr
-        return HlsevenProtocol(self, self.hl7)
+        return HlsevenProtocol(self)
 
 if __name__ == "__main__":
     import hl7

@@ -1,15 +1,24 @@
 import conf, logging, datetime, time
 from orm import Orm
 from hl7 import Hlseven
-
+import sys
 """
     Main entrypoint of the NourAures Connector
 """
 TIME = time.time() # Contain the time at the start of the program
 
-logger = conf._init_logger()
+logger = conf._init_logger(filehandler=conf.LOG_ALL)
+
 
 EXAMENS_ID = 10925 # TODO REMOVE
+if len(sys.argv) > 1:
+    try:
+        EXAMENS_ID = sys.argv[1]
+        with open("php_call.txt", "a") as f:
+            f.writelines(f"System called at {datetime.datetime.now().strftime(conf.DT_FORMAT)} : argv : {sys.argv}\n")
+    except:
+        logger.critical(f"[+] Can't find the EXAMEN_ID in the arguments passed : {sys.argv} [+]")
+
 EXAMEN_ROW = None # Will contain the examen row
 PATIENT_ROW = None # Will contain the patient row
 MEDECIN_ROWS = None # Will contain the medeincs rows (intervenant + prescripteur)
@@ -81,7 +90,7 @@ if(data):
 
 data = orm.get_medecin(EXAMENS_ID)
 if(data):
-    MEDECIN_ROWS = list(data)[0]
+    MEDECIN_ROWS = (list(data[0]), list(data[1]))
     logger.debug(f"[+] MEDECIN_ROWS {MEDECIN_ROWS} [+]")
 
 # We construct the hlseven class with all the information
@@ -91,4 +100,4 @@ hlseven = constructHl7Orm(hlseven, PATIENT_ROW, EXAMEN_ROW, MEDECIN_ROWS, TYPES_
 ORM_MSG = hlseven.to_er7(trailing_children=True)
 
 logger.debug(str(ORM_MSG).encode("utf8"))
-logger.info(f"PROCESS FINISHED IN  {time.time() - TIME} seconds")
+logger.info(f"PROCESS FINISHED IN  {time.time() - TIME} seconds \n\n")
