@@ -53,6 +53,7 @@ LOG_ALL = "logs_all.txt"
 # Loggers name to use
 LOGGER_ORM = "Orm"
 LOGGER_HL7 = "HL7"
+LOGGER_UTILS = "Utils"
 LOGGER_SERVER = "Server"
 LOGGER_ALL = "all"
 

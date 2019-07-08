@@ -23,7 +23,7 @@ def readXmlFile(xmlPath):
         Take a path into the param and convert the xml file into a python object
     """
     try:
-        logger = conf._init_logger()
+        logger = conf._init_logger(logger=conf.LOGGER_UTILS)
         obj = []
         path = conf.FULL_PATH+xmlPath
 
