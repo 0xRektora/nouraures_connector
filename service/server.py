@@ -6,6 +6,8 @@ import conf, logging
 class HlsevenProtocol(Protocol):
     def __init__(self, factory):
         self.logger = conf._init_logger(logger=conf.LOGGER_SERVER, filehandler=conf.LOG_DEBUG)
+        self.logger = logging.getLogger(conf.LOGGER_SERVER)
+
         self.logger.info("[+] Initilizing Server [+]")
         self.factory = factory
         self.ack_try = 5 # Number of time trying to receive the right ACK
@@ -73,4 +75,4 @@ if __name__ == "__main__":
     endpoint = TCP4ServerEndpoint(reactor, conf.SERVER_PORT)
     endpoint.listen(HlsevenFactory(hl))
     print("Running server")
-    reactor.run()
+    reactor.run() #pylint: disable=no-member

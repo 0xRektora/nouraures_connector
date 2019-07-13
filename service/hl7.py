@@ -1,5 +1,5 @@
 from hl7apy.core import Message
-import logging
+import logging, conf
 import uuid  # TODO REMOVE
 from utils import Singleton
 
@@ -10,8 +10,9 @@ class Hlseven(Message, Singleton):
     """
 
     def __init__(self):
-
-        logging.debug("[-] Hlseven initialized [-]")
+        self.logger = conf._init_logger(logger=conf.LOGGER_HL7)
+        self.logger = logging.getLogger(conf.LOGGER_HL7)
+        self.logger.debug("[-] Hlseven initialized [-]")
         super().__init__()
         self.name = "ORM_01"
         self.init_msh()
@@ -20,13 +21,13 @@ class Hlseven(Message, Singleton):
         self.init_orc()
         self.init_obr()
 
-        logging.debug("[+] Hlseven initialized [+]")
+        self.logger.debug("[+] Hlseven initialized [+]")
 
     def init_msh(self):
         """
             Function that init the msh headers
         """
-        logging.debug("[-] Init MSH [-]")
+        self.logger.debug("[-] Init MSH [-]")
         self.msh.msh_1 = "|"
         self.msh.msh_3 = "NourauresConnector"
         self.msh.msh_4 = "NourAures"
@@ -38,7 +39,7 @@ class Hlseven(Message, Singleton):
         self.msh.msh_11 = "P"
         self.msh.msh_12 = "2.3.1"
         self.msh.msh_15 = "NE"
-        logging.debug("[+] Init MSH [+]")
+        self.logger.debug("[+] Init MSH [+]")
 
     def init_pid(self):
         self.add_segment("PID")
@@ -55,6 +56,5 @@ class Hlseven(Message, Singleton):
 
 if __name__ == "__main__":
     import conf
-    logger = conf._init_logger(logger=conf.LOGGER_HL7, filehandler=False)
     m = Hlseven()
-    logging.debug("\n"+m.to_er7(trailing_children=True))
+    m.logger.debug("\n"+m.to_er7(trailing_children=True))

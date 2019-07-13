@@ -5,7 +5,7 @@ import conf
 class Greeter(Protocol):
     def sendMessage(self, msg):
         self.transport.write("MESSAGE %s\n" % msg)
-    
+
     def dataReceived(self, data):
         print(data.decode("utf8"))
         self.transport.write("0".encode("utf8"))

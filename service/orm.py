@@ -13,7 +13,9 @@ class Orm(Singleton):
         """
             Init the connetcion with the database
         """
-        self.logger = conf._init_logger(logger=conf.LOGGER_ORM, filehandler=conf.LOG_INFO)
+        self.logger = conf._init_logger(logger=conf.LOGGER_ORM)
+        self.logger = logging.getLogger(conf.LOGGER_ORM)
+
         self.logger.info("[+] Initilizing Orm [+]")
 
 

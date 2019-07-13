@@ -64,6 +64,7 @@ def _init_logger(logger=LOGGER_ALL, filehandler=LOG_ALL, level_type=LOG_TYPE):
         try:
             # Init variables
             logger = logging.getLogger(logger)
+            logger.propagate = False # remove stdout
             handler = None
             formatter = None
 

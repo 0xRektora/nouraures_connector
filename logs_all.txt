@@ -4,3 +4,384 @@ all - readXmlFile - INFO - 34 - 2019-07-07 21:19:44,611 - [+] Successfully loade
 Utils - readXmlFile - INFO - 34 - 2019-07-07 21:20:58,271 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
 Utils - readXmlFile - INFO - 34 - 2019-07-07 21:20:58,687 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
 Utils - readXmlFile - INFO - 34 - 2019-07-07 21:20:58,687 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
+Utils - readXmlFile - INFO - 34 - 2019-07-11 17:10:16,417 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
+Utils - readXmlFile - INFO - 34 - 2019-07-11 17:10:18,314 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - readXmlFile - INFO - 34 - 2019-07-11 17:10:18,314 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - readXmlFile - INFO - 34 - 2019-07-11 17:10:30,688 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
+Utils - readXmlFile - INFO - 34 - 2019-07-11 17:45:53,997 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
+Utils - readXmlFile - INFO - 34 - 2019-07-11 17:45:54,000 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - readXmlFile - INFO - 34 - 2019-07-11 17:45:54,000 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+all - <module> - DEBUG - 83 - 2019-07-11 17:45:54,880 - [+] EXAMEN_ROW (10925, 4378, datetime.datetime(2019, 5, 26, 17, 9, 4), None, None, 103, 2, None, 7, 0, None, 0, 'auto', 0, 17000, 0, '', 0) [+]
+all - <module> - DEBUG - 88 - 2019-07-11 17:45:54,898 - [+] PATIENT_ROW (4378, 'hani ', 'bouras', 'Homme', datetime.date(2001, 11, 11), 'cité du grand cerf bezons paris', '623730464', '', datetime.datetime(2019, 5, 26, 16, 5, 49)) [+]
+all - <module> - DEBUG - 93 - 2019-07-11 17:45:54,918 - [+] TYPES_INTERVENTION_ROW (103, 'Abdominale : hépatique/ pancréatique/ rénale/\r\nsurrénalienne', 7, 17000, 25000, 35, None, None, 0, None) [+]
+all - <module> - DEBUG - 106 - 2019-07-11 17:45:55,023 - b'MSH|^~\\&|NourauresConnector|NourAures|EVOLUCARE|EVOLUCARE|YYYYMMDDHHMMSS||ORM^O01|092b4980-a71f-4161-a3d9-9dbeb5727de8|P|2.3.1|||NE||||||\rPID|||4378^^^NourauresConnector||bouras^hani ||20011111000000|M|||||||||||||||||||||||||||||||\rPV1||O|EXTERNE|||||||||||||||||||||||||||||||||||||||||20190526170904||||||||\rORC|NW||10925||||^^^20190526170904||20190526170904|||||||||||||||||||||\rOBR||||103^Abdominale : h\xc3\xa9patique/ pancr\xc3\xa9atique/ r\xc3\xa9nale/\r\nsurr\xc3\xa9nalienne||||||||||||||||||||CR|||^^^20190526170904||||||||||||||||||||||'
+all - <module> - INFO - 107 - 2019-07-11 17:45:55,025 - PROCESS FINISHED IN  1.030191421508789 seconds 
+
+
+Utils - readXmlFile - INFO - 34 - 2019-07-11 17:47:12,913 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
+Utils - readXmlFile - INFO - 34 - 2019-07-11 17:47:12,917 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - readXmlFile - INFO - 34 - 2019-07-11 17:47:12,917 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+all - <module> - DEBUG - 83 - 2019-07-11 17:47:13,504 - [+] EXAMEN_ROW (10925, 4378, datetime.datetime(2019, 5, 26, 17, 9, 4), None, None, 103, 2, None, 7, 0, None, 0, 'auto', 0, 17000, 0, '', 0) [+]
+all - <module> - DEBUG - 88 - 2019-07-11 17:47:13,521 - [+] PATIENT_ROW (4378, 'hani ', 'bouras', 'Homme', datetime.date(2001, 11, 11), 'cité du grand cerf bezons paris', '623730464', '', datetime.datetime(2019, 5, 26, 16, 5, 49)) [+]
+all - <module> - DEBUG - 93 - 2019-07-11 17:47:13,538 - [+] TYPES_INTERVENTION_ROW (103, 'Abdominale : hépatique/ pancréatique/ rénale/\r\nsurrénalienne', 7, 17000, 25000, 35, None, None, 0, None) [+]
+all - <module> - DEBUG - 106 - 2019-07-11 17:47:13,652 - b'MSH|^~\\&|NourauresConnector|NourAures|EVOLUCARE|EVOLUCARE|YYYYMMDDHHMMSS||ORM^O01|ae5c8f4f-5e49-4747-829b-019f7408dfb7|P|2.3.1|||NE||||||\rPID|||4378^^^NourauresConnector||bouras^hani ||20011111000000|M|||||||||||||||||||||||||||||||\rPV1||O|EXTERNE|||||||||||||||||||||||||||||||||||||||||20190526170904||||||||\rORC|NW||10925||||^^^20190526170904||20190526170904|||||||||||||||||||||\rOBR||||103^Abdominale : h\xc3\xa9patique/ pancr\xc3\xa9atique/ r\xc3\xa9nale/\r\nsurr\xc3\xa9nalienne||||||||||||||||||||CR|||^^^20190526170904||||||||||||||||||||||'
+all - <module> - INFO - 107 - 2019-07-11 17:47:13,657 - PROCESS FINISHED IN  0.7455704212188721 seconds 
+
+
+Utils - readXmlFile - INFO - 34 - 2019-07-11 17:59:15,777 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
+Utils - readXmlFile - INFO - 34 - 2019-07-11 17:59:15,780 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - readXmlFile - INFO - 34 - 2019-07-11 17:59:15,780 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+all - <module> - DEBUG - 105 - 2019-07-11 17:59:16,282 - [+] EXAMEN_ROW (10925, 4378, datetime.datetime(2019, 5, 26, 17, 9, 4), None, None, 103, 2, None, 7, 0, None, 0, 'auto', 0, 17000, 0, '', 0) [+]
+all - <module> - DEBUG - 110 - 2019-07-11 17:59:16,296 - [+] PATIENT_ROW (4378, 'hani ', 'bouras', 'Homme', datetime.date(2001, 11, 11), 'cité du grand cerf bezons paris', '623730464', '', datetime.datetime(2019, 5, 26, 16, 5, 49)) [+]
+all - <module> - DEBUG - 115 - 2019-07-11 17:59:16,311 - [+] TYPES_INTERVENTION_ROW (103, 'Abdominale : hépatique/ pancréatique/ rénale/\r\nsurrénalienne', 7, 17000, 25000, 35, None, None, 0, None) [+]
+Utils - readXmlFile - INFO - 34 - 2019-07-11 17:59:51,824 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
+Utils - readXmlFile - INFO - 34 - 2019-07-11 17:59:51,827 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - readXmlFile - INFO - 34 - 2019-07-11 17:59:51,827 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+all - <module> - DEBUG - 105 - 2019-07-11 17:59:52,399 - [+] EXAMEN_ROW (10925, 4378, datetime.datetime(2019, 5, 26, 17, 9, 4), None, None, 103, 2, None, 7, 0, None, 0, 'auto', 0, 17000, 0, '', 0) [+]
+all - <module> - DEBUG - 110 - 2019-07-11 17:59:52,414 - [+] PATIENT_ROW (4378, 'hani ', 'bouras', 'Homme', datetime.date(2001, 11, 11), 'cité du grand cerf bezons paris', '623730464', '', datetime.datetime(2019, 5, 26, 16, 5, 49)) [+]
+all - <module> - DEBUG - 115 - 2019-07-11 17:59:52,431 - [+] TYPES_INTERVENTION_ROW (103, 'Abdominale : hépatique/ pancréatique/ rénale/\r\nsurrénalienne', 7, 17000, 25000, 35, None, None, 0, None) [+]
+Utils - readXmlFile - INFO - 34 - 2019-07-11 18:02:31,284 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
+Utils - readXmlFile - INFO - 34 - 2019-07-11 18:02:31,287 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - readXmlFile - INFO - 34 - 2019-07-11 18:02:31,287 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+all - <module> - DEBUG - 105 - 2019-07-11 18:02:32,021 - [+] EXAMEN_ROW (10925, 4378, datetime.datetime(2019, 5, 26, 17, 9, 4), None, None, 103, 2, None, 7, 0, None, 0, 'auto', 0, 17000, 0, '', 0) [+]
+all - <module> - DEBUG - 110 - 2019-07-11 18:02:32,040 - [+] PATIENT_ROW (4378, 'hani ', 'bouras', 'Homme', datetime.date(2001, 11, 11), 'cité du grand cerf bezons paris', '623730464', '', datetime.datetime(2019, 5, 26, 16, 5, 49)) [+]
+all - <module> - DEBUG - 115 - 2019-07-11 18:02:32,061 - [+] TYPES_INTERVENTION_ROW (103, 'Abdominale : hépatique/ pancréatique/ rénale/\r\nsurrénalienne', 7, 17000, 25000, 35, None, None, 0, None) [+]
+all - <module> - CRITICAL - 150 - 2019-07-11 18:02:32,074 - [-] Critical error, the medecin intervenent was not found [-]
+all - <module> - INFO - 151 - 2019-07-11 18:02:32,076 - PROCESS FINISHED IN  0.793137788772583 seconds 
+
+
+Utils - readXmlFile - INFO - 34 - 2019-07-11 18:02:42,038 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
+Utils - readXmlFile - INFO - 34 - 2019-07-11 18:02:42,040 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - readXmlFile - INFO - 34 - 2019-07-11 18:02:42,040 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+all - <module> - DEBUG - 105 - 2019-07-11 18:02:42,506 - [+] EXAMEN_ROW (10925, 4378, datetime.datetime(2019, 5, 26, 17, 9, 4), None, None, 103, 2, None, 7, 0, None, 0, 'auto', 0, 17000, 0, '', 0) [+]
+all - <module> - DEBUG - 110 - 2019-07-11 18:02:42,518 - [+] PATIENT_ROW (4378, 'hani ', 'bouras', 'Homme', datetime.date(2001, 11, 11), 'cité du grand cerf bezons paris', '623730464', '', datetime.datetime(2019, 5, 26, 16, 5, 49)) [+]
+all - <module> - DEBUG - 115 - 2019-07-11 18:02:42,535 - [+] TYPES_INTERVENTION_ROW (103, 'Abdominale : hépatique/ pancréatique/ rénale/\r\nsurrénalienne', 7, 17000, 25000, 35, None, None, 0, None) [+]
+all - <module> - CRITICAL - 150 - 2019-07-11 18:02:42,546 - [-] Critical error, the medecin intervenent was not found [-]
+all - <module> - INFO - 151 - 2019-07-11 18:02:42,547 - PROCESS FINISHED IN  0.5117049217224121 seconds 
+
+
+Utils - readXmlFile - INFO - 34 - 2019-07-11 18:02:46,771 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
+Utils - readXmlFile - INFO - 34 - 2019-07-11 18:02:46,773 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - readXmlFile - INFO - 34 - 2019-07-11 18:02:46,773 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+all - <module> - DEBUG - 105 - 2019-07-11 18:02:47,223 - [+] EXAMEN_ROW (10925, 4378, datetime.datetime(2019, 5, 26, 17, 9, 4), None, None, 103, 2, None, 7, 0, None, 0, 'auto', 0, 17000, 0, '', 0) [+]
+all - <module> - DEBUG - 110 - 2019-07-11 18:02:47,236 - [+] PATIENT_ROW (4378, 'hani ', 'bouras', 'Homme', datetime.date(2001, 11, 11), 'cité du grand cerf bezons paris', '623730464', '', datetime.datetime(2019, 5, 26, 16, 5, 49)) [+]
+all - <module> - DEBUG - 115 - 2019-07-11 18:02:47,257 - [+] TYPES_INTERVENTION_ROW (103, 'Abdominale : hépatique/ pancréatique/ rénale/\r\nsurrénalienne', 7, 17000, 25000, 35, None, None, 0, None) [+]
+all - <module> - CRITICAL - 150 - 2019-07-11 18:02:47,268 - [-] Critical error, the medecin intervenent was not found [-]
+all - <module> - INFO - 151 - 2019-07-11 18:02:47,270 - PROCESS FINISHED IN  0.5007121562957764 seconds 
+
+
+Utils - readXmlFile - INFO - 34 - 2019-07-11 18:03:09,550 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
+Utils - readXmlFile - INFO - 34 - 2019-07-11 18:03:09,553 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - readXmlFile - INFO - 34 - 2019-07-11 18:03:09,553 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+all - <module> - DEBUG - 105 - 2019-07-11 18:03:10,026 - [+] EXAMEN_ROW (10925, 4378, datetime.datetime(2019, 5, 26, 17, 9, 4), None, None, 103, 2, None, 7, 0, None, 0, 'auto', 0, 17000, 0, '', 0) [+]
+all - <module> - DEBUG - 110 - 2019-07-11 18:03:10,042 - [+] PATIENT_ROW (4378, 'hani ', 'bouras', 'Homme', datetime.date(2001, 11, 11), 'cité du grand cerf bezons paris', '623730464', '', datetime.datetime(2019, 5, 26, 16, 5, 49)) [+]
+all - <module> - DEBUG - 115 - 2019-07-11 18:03:10,056 - [+] TYPES_INTERVENTION_ROW (103, 'Abdominale : hépatique/ pancréatique/ rénale/\r\nsurrénalienne', 7, 17000, 25000, 35, None, None, 0, None) [+]
+all - <module> - CRITICAL - 150 - 2019-07-11 18:03:10,067 - [-] Critical error, the medecin intervenent was not found [-]
+all - <module> - INFO - 151 - 2019-07-11 18:03:10,068 - PROCESS FINISHED IN  0.5182905197143555 seconds 
+
+
+Utils - readXmlFile - INFO - 34 - 2019-07-11 18:03:13,447 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
+Utils - readXmlFile - INFO - 34 - 2019-07-11 18:03:13,450 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - readXmlFile - INFO - 34 - 2019-07-11 18:03:13,450 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+all - <module> - DEBUG - 105 - 2019-07-11 18:03:13,880 - [+] EXAMEN_ROW (10925, 4378, datetime.datetime(2019, 5, 26, 17, 9, 4), None, None, 103, 2, None, 7, 0, None, 0, 'auto', 0, 17000, 0, '', 0) [+]
+all - <module> - DEBUG - 110 - 2019-07-11 18:03:13,894 - [+] PATIENT_ROW (4378, 'hani ', 'bouras', 'Homme', datetime.date(2001, 11, 11), 'cité du grand cerf bezons paris', '623730464', '', datetime.datetime(2019, 5, 26, 16, 5, 49)) [+]
+all - <module> - DEBUG - 115 - 2019-07-11 18:03:13,907 - [+] TYPES_INTERVENTION_ROW (103, 'Abdominale : hépatique/ pancréatique/ rénale/\r\nsurrénalienne', 7, 17000, 25000, 35, None, None, 0, None) [+]
+all - <module> - CRITICAL - 150 - 2019-07-11 18:03:13,920 - [-] Critical error, the medecin intervenent was not found [-]
+all - <module> - INFO - 151 - 2019-07-11 18:03:13,921 - PROCESS FINISHED IN  0.4757256507873535 seconds 
+
+
+Utils - readXmlFile - INFO - 34 - 2019-07-11 18:03:17,896 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
+Utils - readXmlFile - INFO - 34 - 2019-07-11 18:03:17,898 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - readXmlFile - INFO - 34 - 2019-07-11 18:03:17,898 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+all - <module> - DEBUG - 105 - 2019-07-11 18:03:18,358 - [+] EXAMEN_ROW (10925, 4378, datetime.datetime(2019, 5, 26, 17, 9, 4), None, None, 103, 2, None, 7, 0, None, 0, 'auto', 0, 17000, 0, '', 0) [+]
+all - <module> - DEBUG - 110 - 2019-07-11 18:03:18,373 - [+] PATIENT_ROW (4378, 'hani ', 'bouras', 'Homme', datetime.date(2001, 11, 11), 'cité du grand cerf bezons paris', '623730464', '', datetime.datetime(2019, 5, 26, 16, 5, 49)) [+]
+all - <module> - DEBUG - 115 - 2019-07-11 18:03:18,392 - [+] TYPES_INTERVENTION_ROW (103, 'Abdominale : hépatique/ pancréatique/ rénale/\r\nsurrénalienne', 7, 17000, 25000, 35, None, None, 0, None) [+]
+all - <module> - CRITICAL - 150 - 2019-07-11 18:03:18,400 - [-] Critical error, the medecin intervenent was not found [-]
+all - <module> - INFO - 151 - 2019-07-11 18:03:18,402 - PROCESS FINISHED IN  0.5052657127380371 seconds 
+
+
+Utils - getFile - INFO - 70 - 2019-07-11 18:27:09,511 - [+] Load and pickling F:\IFS\nouraures_connector/service/data/medecins.csv [+]
+Utils - readXmlFile - CRITICAL - 46 - 2019-07-11 18:27:09,514 - [+] Can't open the file F:\IFS\nouraures_connectorF:\IFS\nouraures_connector/service/data/medecins.csv [+]
+Utils - readXmlFile - CRITICAL - 46 - 2019-07-11 18:27:09,514 - [+] Can't open the file F:\IFS\nouraures_connectorF:\IFS\nouraures_connector/service/data/medecins.csv [+]
+Utils - getFile - CRITICAL - 77 - 2019-07-11 18:27:09,514 - [+] Can't find the file F:\IFS\nouraures_connector/service/data/medecins.csv [+]
+Utils - getFile - CRITICAL - 77 - 2019-07-11 18:27:09,514 - [+] Can't find the file F:\IFS\nouraures_connector/service/data/medecins.csv [+]
+Utils - getFile - INFO - 70 - 2019-07-11 18:27:09,515 - [+] Load and pickling F:\IFS\nouraures_connector/service/data/types_intervention.csv [+]
+Utils - getFile - INFO - 70 - 2019-07-11 18:27:09,515 - [+] Load and pickling F:\IFS\nouraures_connector/service/data/types_intervention.csv [+]
+Utils - getFile - INFO - 70 - 2019-07-11 18:27:09,515 - [+] Load and pickling F:\IFS\nouraures_connector/service/data/types_intervention.csv [+]
+Utils - readXmlFile - CRITICAL - 46 - 2019-07-11 18:27:09,515 - [+] Can't open the file F:\IFS\nouraures_connectorF:\IFS\nouraures_connector/service/data/types_intervention.csv [+]
+Utils - readXmlFile - CRITICAL - 46 - 2019-07-11 18:27:09,515 - [+] Can't open the file F:\IFS\nouraures_connectorF:\IFS\nouraures_connector/service/data/types_intervention.csv [+]
+Utils - readXmlFile - CRITICAL - 46 - 2019-07-11 18:27:09,515 - [+] Can't open the file F:\IFS\nouraures_connectorF:\IFS\nouraures_connector/service/data/types_intervention.csv [+]
+Utils - readXmlFile - CRITICAL - 46 - 2019-07-11 18:27:09,515 - [+] Can't open the file F:\IFS\nouraures_connectorF:\IFS\nouraures_connector/service/data/types_intervention.csv [+]
+Utils - getFile - CRITICAL - 77 - 2019-07-11 18:27:09,516 - [+] Can't find the file F:\IFS\nouraures_connector/service/data/types_intervention.csv [+]
+Utils - getFile - CRITICAL - 77 - 2019-07-11 18:27:09,516 - [+] Can't find the file F:\IFS\nouraures_connector/service/data/types_intervention.csv [+]
+Utils - getFile - CRITICAL - 77 - 2019-07-11 18:27:09,516 - [+] Can't find the file F:\IFS\nouraures_connector/service/data/types_intervention.csv [+]
+Utils - getFile - CRITICAL - 77 - 2019-07-11 18:27:09,516 - [+] Can't find the file F:\IFS\nouraures_connector/service/data/types_intervention.csv [+]
+all - <module> - DEBUG - 105 - 2019-07-11 18:27:10,012 - [+] EXAMEN_ROW (10925, 4378, datetime.datetime(2019, 5, 26, 17, 9, 4), None, None, 103, 2, None, 7, 0, None, 0, 'auto', 0, 17000, 0, '', 0) [+]
+all - <module> - DEBUG - 110 - 2019-07-11 18:27:10,027 - [+] PATIENT_ROW (4378, 'hani ', 'bouras', 'Homme', datetime.date(2001, 11, 11), 'cité du grand cerf bezons paris', '623730464', '', datetime.datetime(2019, 5, 26, 16, 5, 49)) [+]
+all - <module> - DEBUG - 115 - 2019-07-11 18:27:10,041 - [+] TYPES_INTERVENTION_ROW (103, 'Abdominale : hépatique/ pancréatique/ rénale/\r\nsurrénalienne', 7, 17000, 25000, 35, None, None, 0, None) [+]
+all - <module> - CRITICAL - 150 - 2019-07-11 18:27:10,051 - [-] Critical error, the medecin intervenent was not found [-]
+all - <module> - INFO - 151 - 2019-07-11 18:27:10,052 - PROCESS FINISHED IN  0.5422840118408203 seconds 
+
+
+Utils - getFile - INFO - 70 - 2019-07-11 18:27:25,313 - [+] Load and pickling F:\IFS\nouraures_connector/service/data/medecins.csv [+]
+Utils - readXmlFile - CRITICAL - 46 - 2019-07-11 18:27:25,318 - [+] Can't open the file F:\IFS\nouraures_connectorF:\IFS\nouraures_connector/service/data/medecins.csv [+]
+Utils - readXmlFile - CRITICAL - 46 - 2019-07-11 18:27:25,318 - [+] Can't open the file F:\IFS\nouraures_connectorF:\IFS\nouraures_connector/service/data/medecins.csv [+]
+Utils - getFile - CRITICAL - 77 - 2019-07-11 18:27:25,319 - [+] Can't find the file F:\IFS\nouraures_connector/service/data/medecins.csv [+]
+Utils - getFile - CRITICAL - 77 - 2019-07-11 18:27:25,319 - [+] Can't find the file F:\IFS\nouraures_connector/service/data/medecins.csv [+]
+Utils - getFile - INFO - 70 - 2019-07-11 18:27:25,320 - [+] Load and pickling F:\IFS\nouraures_connector/service/data/types_intervention.csv [+]
+Utils - getFile - INFO - 70 - 2019-07-11 18:27:25,320 - [+] Load and pickling F:\IFS\nouraures_connector/service/data/types_intervention.csv [+]
+Utils - getFile - INFO - 70 - 2019-07-11 18:27:25,320 - [+] Load and pickling F:\IFS\nouraures_connector/service/data/types_intervention.csv [+]
+Utils - readXmlFile - CRITICAL - 46 - 2019-07-11 18:27:25,321 - [+] Can't open the file F:\IFS\nouraures_connectorF:\IFS\nouraures_connector/service/data/types_intervention.csv [+]
+Utils - readXmlFile - CRITICAL - 46 - 2019-07-11 18:27:25,321 - [+] Can't open the file F:\IFS\nouraures_connectorF:\IFS\nouraures_connector/service/data/types_intervention.csv [+]
+Utils - readXmlFile - CRITICAL - 46 - 2019-07-11 18:27:25,321 - [+] Can't open the file F:\IFS\nouraures_connectorF:\IFS\nouraures_connector/service/data/types_intervention.csv [+]
+Utils - readXmlFile - CRITICAL - 46 - 2019-07-11 18:27:25,321 - [+] Can't open the file F:\IFS\nouraures_connectorF:\IFS\nouraures_connector/service/data/types_intervention.csv [+]
+Utils - getFile - CRITICAL - 77 - 2019-07-11 18:27:25,322 - [+] Can't find the file F:\IFS\nouraures_connector/service/data/types_intervention.csv [+]
+Utils - getFile - CRITICAL - 77 - 2019-07-11 18:27:25,322 - [+] Can't find the file F:\IFS\nouraures_connector/service/data/types_intervention.csv [+]
+Utils - getFile - CRITICAL - 77 - 2019-07-11 18:27:25,322 - [+] Can't find the file F:\IFS\nouraures_connector/service/data/types_intervention.csv [+]
+Utils - getFile - CRITICAL - 77 - 2019-07-11 18:27:25,322 - [+] Can't find the file F:\IFS\nouraures_connector/service/data/types_intervention.csv [+]
+all - <module> - DEBUG - 105 - 2019-07-11 18:27:25,880 - [+] EXAMEN_ROW (10925, 4378, datetime.datetime(2019, 5, 26, 17, 9, 4), None, None, 103, 2, None, 7, 0, None, 0, 'auto', 0, 17000, 0, '', 0) [+]
+all - <module> - DEBUG - 110 - 2019-07-11 18:27:25,895 - [+] PATIENT_ROW (4378, 'hani ', 'bouras', 'Homme', datetime.date(2001, 11, 11), 'cité du grand cerf bezons paris', '623730464', '', datetime.datetime(2019, 5, 26, 16, 5, 49)) [+]
+all - <module> - DEBUG - 115 - 2019-07-11 18:27:25,911 - [+] TYPES_INTERVENTION_ROW (103, 'Abdominale : hépatique/ pancréatique/ rénale/\r\nsurrénalienne', 7, 17000, 25000, 35, None, None, 0, None) [+]
+all - <module> - CRITICAL - 150 - 2019-07-11 18:27:25,922 - [-] Critical error, the medecin intervenent was not found [-]
+all - <module> - INFO - 151 - 2019-07-11 18:27:25,931 - PROCESS FINISHED IN  0.620171070098877 seconds 
+
+
+Utils - getFile - INFO - 70 - 2019-07-11 18:33:25,514 - [+] Load and pickling /service/data/medecins.csv [+]
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:33:25,517 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:33:25,517 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
+Utils - getFile - CRITICAL - 77 - 2019-07-11 18:33:25,518 - [+] Can't find the file F:\IFS\nouraures_connector/service/data/medecins.csv [+]
+Utils - getFile - CRITICAL - 77 - 2019-07-11 18:33:25,518 - [+] Can't find the file F:\IFS\nouraures_connector/service/data/medecins.csv [+]
+Utils - getFile - INFO - 70 - 2019-07-11 18:33:25,518 - [+] Load and pickling /service/data/types_intervention.csv [+]
+Utils - getFile - INFO - 70 - 2019-07-11 18:33:25,518 - [+] Load and pickling /service/data/types_intervention.csv [+]
+Utils - getFile - INFO - 70 - 2019-07-11 18:33:25,518 - [+] Load and pickling /service/data/types_intervention.csv [+]
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:33:25,520 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:33:25,520 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:33:25,520 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:33:25,520 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - getFile - CRITICAL - 77 - 2019-07-11 18:33:25,523 - [+] Can't find the file F:\IFS\nouraures_connector/service/data/types_intervention.csv [+]
+Utils - getFile - CRITICAL - 77 - 2019-07-11 18:33:25,523 - [+] Can't find the file F:\IFS\nouraures_connector/service/data/types_intervention.csv [+]
+Utils - getFile - CRITICAL - 77 - 2019-07-11 18:33:25,523 - [+] Can't find the file F:\IFS\nouraures_connector/service/data/types_intervention.csv [+]
+Utils - getFile - CRITICAL - 77 - 2019-07-11 18:33:25,523 - [+] Can't find the file F:\IFS\nouraures_connector/service/data/types_intervention.csv [+]
+all - <module> - DEBUG - 105 - 2019-07-11 18:33:25,976 - [+] EXAMEN_ROW (10925, 4378, datetime.datetime(2019, 5, 26, 17, 9, 4), None, None, 103, 2, None, 7, 0, None, 0, 'auto', 0, 17000, 0, '', 0) [+]
+all - <module> - DEBUG - 110 - 2019-07-11 18:33:25,991 - [+] PATIENT_ROW (4378, 'hani ', 'bouras', 'Homme', datetime.date(2001, 11, 11), 'cité du grand cerf bezons paris', '623730464', '', datetime.datetime(2019, 5, 26, 16, 5, 49)) [+]
+all - <module> - DEBUG - 115 - 2019-07-11 18:33:26,011 - [+] TYPES_INTERVENTION_ROW (103, 'Abdominale : hépatique/ pancréatique/ rénale/\r\nsurrénalienne', 7, 17000, 25000, 35, None, None, 0, None) [+]
+all - <module> - CRITICAL - 150 - 2019-07-11 18:33:26,019 - [-] Critical error, the medecin intervenent was not found [-]
+all - <module> - INFO - 151 - 2019-07-11 18:33:26,020 - PROCESS FINISHED IN  0.5057075023651123 seconds 
+
+
+Utils - getFile - INFO - 69 - 2019-07-11 18:36:13,724 - [+] Load and pickling /service/data/medecins.csv [+]
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:36:13,728 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:36:13,728 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
+Utils - getFile - INFO - 69 - 2019-07-11 18:36:21,960 - [+] Load and pickling /service/data/medecins.csv [+]
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:36:21,964 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:36:21,964 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
+Utils - getFile - CRITICAL - 76 - 2019-07-11 18:36:21,965 - [+] Can't find the file an integer is required (got type str) [+]
+Utils - getFile - CRITICAL - 76 - 2019-07-11 18:36:21,965 - [+] Can't find the file an integer is required (got type str) [+]
+Utils - getFile - INFO - 69 - 2019-07-11 18:36:21,966 - [+] Load and pickling /service/data/types_intervention.csv [+]
+Utils - getFile - INFO - 69 - 2019-07-11 18:36:21,966 - [+] Load and pickling /service/data/types_intervention.csv [+]
+Utils - getFile - INFO - 69 - 2019-07-11 18:36:21,966 - [+] Load and pickling /service/data/types_intervention.csv [+]
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:36:21,969 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:36:21,969 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:36:21,969 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:36:21,969 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - getFile - CRITICAL - 76 - 2019-07-11 18:36:21,974 - [+] Can't find the file an integer is required (got type str) [+]
+Utils - getFile - CRITICAL - 76 - 2019-07-11 18:36:21,974 - [+] Can't find the file an integer is required (got type str) [+]
+Utils - getFile - CRITICAL - 76 - 2019-07-11 18:36:21,974 - [+] Can't find the file an integer is required (got type str) [+]
+Utils - getFile - CRITICAL - 76 - 2019-07-11 18:36:21,974 - [+] Can't find the file an integer is required (got type str) [+]
+all - <module> - DEBUG - 105 - 2019-07-11 18:36:22,432 - [+] EXAMEN_ROW (10925, 4378, datetime.datetime(2019, 5, 26, 17, 9, 4), None, None, 103, 2, None, 7, 0, None, 0, 'auto', 0, 17000, 0, '', 0) [+]
+all - <module> - DEBUG - 110 - 2019-07-11 18:36:22,456 - [+] PATIENT_ROW (4378, 'hani ', 'bouras', 'Homme', datetime.date(2001, 11, 11), 'cité du grand cerf bezons paris', '623730464', '', datetime.datetime(2019, 5, 26, 16, 5, 49)) [+]
+all - <module> - DEBUG - 115 - 2019-07-11 18:36:22,473 - [+] TYPES_INTERVENTION_ROW (103, 'Abdominale : hépatique/ pancréatique/ rénale/\r\nsurrénalienne', 7, 17000, 25000, 35, None, None, 0, None) [+]
+all - <module> - CRITICAL - 150 - 2019-07-11 18:36:22,484 - [-] Critical error, the medecin intervenent was not found [-]
+all - <module> - INFO - 151 - 2019-07-11 18:36:22,485 - PROCESS FINISHED IN  0.5266966819763184 seconds 
+
+
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:36:27,565 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:36:28,397 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:36:28,397 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
+Utils - getFile - INFO - 69 - 2019-07-11 18:36:34,305 - [+] Load and pickling /service/data/medecins.csv [+]
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:36:34,308 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:36:34,308 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
+Utils - getFile - CRITICAL - 76 - 2019-07-11 18:36:34,308 - [+] Can't find the file an integer is required (got type str) [+]
+Utils - getFile - CRITICAL - 76 - 2019-07-11 18:36:34,308 - [+] Can't find the file an integer is required (got type str) [+]
+Utils - getFile - INFO - 69 - 2019-07-11 18:36:34,309 - [+] Load and pickling /service/data/types_intervention.csv [+]
+Utils - getFile - INFO - 69 - 2019-07-11 18:36:34,309 - [+] Load and pickling /service/data/types_intervention.csv [+]
+Utils - getFile - INFO - 69 - 2019-07-11 18:36:34,309 - [+] Load and pickling /service/data/types_intervention.csv [+]
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:36:34,311 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:36:34,311 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:36:34,311 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:36:34,311 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - getFile - CRITICAL - 76 - 2019-07-11 18:36:34,314 - [+] Can't find the file an integer is required (got type str) [+]
+Utils - getFile - CRITICAL - 76 - 2019-07-11 18:36:34,314 - [+] Can't find the file an integer is required (got type str) [+]
+Utils - getFile - CRITICAL - 76 - 2019-07-11 18:36:34,314 - [+] Can't find the file an integer is required (got type str) [+]
+Utils - getFile - CRITICAL - 76 - 2019-07-11 18:36:34,314 - [+] Can't find the file an integer is required (got type str) [+]
+all - <module> - DEBUG - 105 - 2019-07-11 18:36:34,754 - [+] EXAMEN_ROW (10925, 4378, datetime.datetime(2019, 5, 26, 17, 9, 4), None, None, 103, 2, None, 7, 0, None, 0, 'auto', 0, 17000, 0, '', 0) [+]
+all - <module> - DEBUG - 110 - 2019-07-11 18:36:34,767 - [+] PATIENT_ROW (4378, 'hani ', 'bouras', 'Homme', datetime.date(2001, 11, 11), 'cité du grand cerf bezons paris', '623730464', '', datetime.datetime(2019, 5, 26, 16, 5, 49)) [+]
+all - <module> - DEBUG - 115 - 2019-07-11 18:36:34,785 - [+] TYPES_INTERVENTION_ROW (103, 'Abdominale : hépatique/ pancréatique/ rénale/\r\nsurrénalienne', 7, 17000, 25000, 35, None, None, 0, None) [+]
+all - <module> - CRITICAL - 150 - 2019-07-11 18:36:34,796 - [-] Critical error, the medecin intervenent was not found [-]
+all - <module> - INFO - 151 - 2019-07-11 18:36:34,798 - PROCESS FINISHED IN  0.49352550506591797 seconds 
+
+
+Utils - getFile - INFO - 69 - 2019-07-11 18:37:32,523 - [+] Load and pickling /service/data/medecins.csv [+]
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:37:32,526 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:37:32,526 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
+Utils - getFile - CRITICAL - 76 - 2019-07-11 18:37:32,527 - [+] Can't find the file /service/data/medecins.csv [+]
+Utils - getFile - CRITICAL - 76 - 2019-07-11 18:37:32,527 - [+] Can't find the file /service/data/medecins.csv [+]
+Utils - getFile - CRITICAL - 77 - 2019-07-11 18:37:32,527 - an integer is required (got type str)
+Utils - getFile - CRITICAL - 77 - 2019-07-11 18:37:32,527 - an integer is required (got type str)
+Utils - getFile - INFO - 69 - 2019-07-11 18:37:32,528 - [+] Load and pickling /service/data/types_intervention.csv [+]
+Utils - getFile - INFO - 69 - 2019-07-11 18:37:32,528 - [+] Load and pickling /service/data/types_intervention.csv [+]
+Utils - getFile - INFO - 69 - 2019-07-11 18:37:32,528 - [+] Load and pickling /service/data/types_intervention.csv [+]
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:37:32,529 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:37:32,529 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:37:32,529 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:37:32,529 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - getFile - CRITICAL - 76 - 2019-07-11 18:37:32,532 - [+] Can't find the file /service/data/types_intervention.csv [+]
+Utils - getFile - CRITICAL - 76 - 2019-07-11 18:37:32,532 - [+] Can't find the file /service/data/types_intervention.csv [+]
+Utils - getFile - CRITICAL - 76 - 2019-07-11 18:37:32,532 - [+] Can't find the file /service/data/types_intervention.csv [+]
+Utils - getFile - CRITICAL - 76 - 2019-07-11 18:37:32,532 - [+] Can't find the file /service/data/types_intervention.csv [+]
+Utils - getFile - CRITICAL - 77 - 2019-07-11 18:37:32,533 - an integer is required (got type str)
+Utils - getFile - CRITICAL - 77 - 2019-07-11 18:37:32,533 - an integer is required (got type str)
+Utils - getFile - CRITICAL - 77 - 2019-07-11 18:37:32,533 - an integer is required (got type str)
+Utils - getFile - CRITICAL - 77 - 2019-07-11 18:37:32,533 - an integer is required (got type str)
+all - <module> - DEBUG - 105 - 2019-07-11 18:37:32,971 - [+] EXAMEN_ROW (10925, 4378, datetime.datetime(2019, 5, 26, 17, 9, 4), None, None, 103, 2, None, 7, 0, None, 0, 'auto', 0, 17000, 0, '', 0) [+]
+all - <module> - DEBUG - 110 - 2019-07-11 18:37:32,986 - [+] PATIENT_ROW (4378, 'hani ', 'bouras', 'Homme', datetime.date(2001, 11, 11), 'cité du grand cerf bezons paris', '623730464', '', datetime.datetime(2019, 5, 26, 16, 5, 49)) [+]
+all - <module> - DEBUG - 115 - 2019-07-11 18:37:32,999 - [+] TYPES_INTERVENTION_ROW (103, 'Abdominale : hépatique/ pancréatique/ rénale/\r\nsurrénalienne', 7, 17000, 25000, 35, None, None, 0, None) [+]
+all - <module> - CRITICAL - 150 - 2019-07-11 18:37:33,009 - [-] Critical error, the medecin intervenent was not found [-]
+all - <module> - INFO - 151 - 2019-07-11 18:37:33,011 - PROCESS FINISHED IN  0.48871850967407227 seconds 
+
+
+Utils - getFile - INFO - 70 - 2019-07-11 18:40:21,899 - [+] Load and pickling /service/data/medecins.csv [+]
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:40:21,903 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:40:21,903 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
+Utils - getFile - INFO - 70 - 2019-07-11 18:40:21,985 - [+] Load and pickling /service/data/types_intervention.csv [+]
+Utils - getFile - INFO - 70 - 2019-07-11 18:40:21,985 - [+] Load and pickling /service/data/types_intervention.csv [+]
+Utils - getFile - INFO - 70 - 2019-07-11 18:40:21,985 - [+] Load and pickling /service/data/types_intervention.csv [+]
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:40:21,988 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:40:21,988 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:40:21,988 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - readXmlFile - INFO - 32 - 2019-07-11 18:40:21,988 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+all - <module> - DEBUG - 105 - 2019-07-11 18:40:22,424 - [+] EXAMEN_ROW (10925, 4378, datetime.datetime(2019, 5, 26, 17, 9, 4), None, None, 103, 2, None, 7, 0, None, 0, 'auto', 0, 17000, 0, '', 0) [+]
+all - <module> - DEBUG - 110 - 2019-07-11 18:40:22,436 - [+] PATIENT_ROW (4378, 'hani ', 'bouras', 'Homme', datetime.date(2001, 11, 11), 'cité du grand cerf bezons paris', '623730464', '', datetime.datetime(2019, 5, 26, 16, 5, 49)) [+]
+all - <module> - DEBUG - 115 - 2019-07-11 18:40:22,451 - [+] TYPES_INTERVENTION_ROW (103, 'Abdominale : hépatique/ pancréatique/ rénale/\r\nsurrénalienne', 7, 17000, 25000, 35, None, None, 0, None) [+]
+all - <module> - CRITICAL - 150 - 2019-07-11 18:40:22,460 - [-] Critical error, the medecin intervenent was not found [-]
+all - <module> - INFO - 151 - 2019-07-11 18:40:22,461 - PROCESS FINISHED IN  0.5632421970367432 seconds 
+
+
+Utils - getFile - INFO - 65 - 2019-07-11 18:40:35,269 - [+] Unpickling F:\IFS\nouraures_connector/service/data/medecins.pickle [+]
+Utils - getFile - INFO - 65 - 2019-07-11 18:40:35,271 - [+] Unpickling F:\IFS\nouraures_connector/service/data/types_intervention.pickle [+]
+Utils - getFile - INFO - 65 - 2019-07-11 18:40:35,271 - [+] Unpickling F:\IFS\nouraures_connector/service/data/types_intervention.pickle [+]
+all - <module> - DEBUG - 105 - 2019-07-11 18:40:35,761 - [+] EXAMEN_ROW (10925, 4378, datetime.datetime(2019, 5, 26, 17, 9, 4), None, None, 103, 2, None, 7, 0, None, 0, 'auto', 0, 17000, 0, '', 0) [+]
+all - <module> - DEBUG - 110 - 2019-07-11 18:40:35,778 - [+] PATIENT_ROW (4378, 'hani ', 'bouras', 'Homme', datetime.date(2001, 11, 11), 'cité du grand cerf bezons paris', '623730464', '', datetime.datetime(2019, 5, 26, 16, 5, 49)) [+]
+all - <module> - DEBUG - 115 - 2019-07-11 18:40:35,799 - [+] TYPES_INTERVENTION_ROW (103, 'Abdominale : hépatique/ pancréatique/ rénale/\r\nsurrénalienne', 7, 17000, 25000, 35, None, None, 0, None) [+]
+all - <module> - CRITICAL - 150 - 2019-07-11 18:40:35,809 - [-] Critical error, the medecin intervenent was not found [-]
+all - <module> - INFO - 151 - 2019-07-11 18:40:35,811 - PROCESS FINISHED IN  0.5426902770996094 seconds 
+
+
+Utils - getFile - INFO - 65 - 2019-07-11 18:58:49,642 - [+] Unpickling F:\IFS\nouraures_connector/service/data/medecins.pickle [+]
+Utils - getFile - INFO - 65 - 2019-07-11 18:58:49,644 - [+] Unpickling F:\IFS\nouraures_connector/service/data/types_intervention.pickle [+]
+Utils - getFile - INFO - 65 - 2019-07-11 18:58:49,644 - [+] Unpickling F:\IFS\nouraures_connector/service/data/types_intervention.pickle [+]
+all - <module> - DEBUG - 110 - 2019-07-11 18:58:50,273 - [+] EXAMEN_ROW (10925, 4378, datetime.datetime(2019, 5, 26, 17, 9, 4), None, None, 103, 2, None, 7, 0, None, 0, 'auto', 0, 17000, 0, '', 0) [+]
+all - <module> - DEBUG - 115 - 2019-07-11 18:58:50,286 - [+] PATIENT_ROW (4378, 'hani ', 'bouras', 'Homme', datetime.date(2001, 11, 11), 'cité du grand cerf bezons paris', '623730464', '', datetime.datetime(2019, 5, 26, 16, 5, 49)) [+]
+all - <module> - DEBUG - 120 - 2019-07-11 18:58:50,298 - [+] TYPES_INTERVENTION_ROW (103, 'Abdominale : hépatique/ pancréatique/ rénale/\r\nsurrénalienne', 7, 17000, 25000, 35, None, None, 0, None) [+]
+all - <module> - DEBUG - 126 - 2019-07-11 18:58:50,313 - [+] wtf [+]
+all - <module> - DEBUG - 130 - 2019-07-11 18:58:50,314 - [+] 0 [+]
+all - <module> - DEBUG - 138 - 2019-07-11 18:58:50,314 - [+] RPPS 0 [+]
+all - <module> - DEBUG - 146 - 2019-07-11 18:58:50,315 - [+] CODE_PRESC 0 [+]
+all - <module> - CRITICAL - 163 - 2019-07-11 18:58:50,315 - [-] Critical error, the medecin intervenent was not found [-]
+all - <module> - INFO - 164 - 2019-07-11 18:58:50,316 - PROCESS FINISHED IN  0.6751787662506104 seconds 
+
+
+Utils - getFile - INFO - 65 - 2019-07-11 19:00:44,404 - [+] Unpickling F:\IFS\nouraures_connector/service/data/medecins.pickle [+]
+Utils - getFile - INFO - 65 - 2019-07-11 19:00:44,406 - [+] Unpickling F:\IFS\nouraures_connector/service/data/types_intervention.pickle [+]
+Utils - getFile - INFO - 65 - 2019-07-11 19:00:44,406 - [+] Unpickling F:\IFS\nouraures_connector/service/data/types_intervention.pickle [+]
+all - <module> - DEBUG - 110 - 2019-07-11 19:00:45,054 - [+] EXAMEN_ROW (10925, 4378, datetime.datetime(2019, 5, 26, 17, 9, 4), None, None, 103, 2, None, 7, 0, None, 0, 'auto', 0, 17000, 0, '', 0) [+]
+all - <module> - DEBUG - 115 - 2019-07-11 19:00:45,069 - [+] PATIENT_ROW (4378, 'hani ', 'bouras', 'Homme', datetime.date(2001, 11, 11), 'cité du grand cerf bezons paris', '623730464', '', datetime.datetime(2019, 5, 26, 16, 5, 49)) [+]
+all - <module> - DEBUG - 120 - 2019-07-11 19:00:45,086 - [+] TYPES_INTERVENTION_ROW (103, 'Abdominale : hépatique/ pancréatique/ rénale/\r\nsurrénalienne', 7, 17000, 25000, 35, None, None, 0, None) [+]
+all - <module> - DEBUG - 126 - 2019-07-11 19:00:45,094 - [+] wtf [+]
+all - <module> - DEBUG - 130 - 2019-07-11 19:00:45,094 - [+] 0 [+]
+all - <module> - DEBUG - 138 - 2019-07-11 19:00:45,095 - [+] RPPS 0 [+]
+all - <module> - DEBUG - 146 - 2019-07-11 19:00:45,095 - [+] CODE_PRESC 0 [+]
+all - <module> - CRITICAL - 163 - 2019-07-11 19:00:45,096 - [-] Critical error, the medecin intervenent was not found [-]
+all - <module> - INFO - 164 - 2019-07-11 19:00:45,096 - PROCESS FINISHED IN  0.6955995559692383 seconds 
+
+
+Utils - getFile - INFO - 65 - 2019-07-11 19:01:24,043 - [+] Unpickling F:\IFS\nouraures_connector/service/data/medecins.pickle [+]
+Utils - getFile - INFO - 65 - 2019-07-11 19:01:24,044 - [+] Unpickling F:\IFS\nouraures_connector/service/data/types_intervention.pickle [+]
+Utils - getFile - INFO - 65 - 2019-07-11 19:01:24,044 - [+] Unpickling F:\IFS\nouraures_connector/service/data/types_intervention.pickle [+]
+all - <module> - DEBUG - 110 - 2019-07-11 19:01:24,577 - [+] EXAMEN_ROW (10925, 4378, datetime.datetime(2019, 5, 26, 17, 9, 4), None, None, 103, 2, None, 7, 0, None, 0, 'auto', 0, 17000, 0, '', 0) [+]
+all - <module> - DEBUG - 115 - 2019-07-11 19:01:24,591 - [+] PATIENT_ROW (4378, 'hani ', 'bouras', 'Homme', datetime.date(2001, 11, 11), 'cité du grand cerf bezons paris', '623730464', '', datetime.datetime(2019, 5, 26, 16, 5, 49)) [+]
+all - <module> - DEBUG - 120 - 2019-07-11 19:01:24,608 - [+] TYPES_INTERVENTION_ROW (103, 'Abdominale : hépatique/ pancréatique/ rénale/\r\nsurrénalienne', 7, 17000, 25000, 35, None, None, 0, None) [+]
+all - <module> - DEBUG - 126 - 2019-07-11 19:01:24,623 - [+] wtf [+]
+all - <module> - DEBUG - 130 - 2019-07-11 19:01:24,623 - [+] 0 [+]
+all - <module> - DEBUG - 138 - 2019-07-11 19:01:24,624 - [+] RPPS 0 [+]
+all - <module> - DEBUG - 146 - 2019-07-11 19:01:24,624 - [+] CODE_PRESC 0 [+]
+all - <module> - CRITICAL - 164 - 2019-07-11 19:01:24,628 - [-] Critical error, the medecin intervenent was not found [-]
+all - <module> - INFO - 165 - 2019-07-11 19:01:24,629 - PROCESS FINISHED IN  0.5870671272277832 seconds 
+
+
+Utils - getFile - INFO - 67 - 2019-07-11 19:07:10,567 - [+] Unpickling F:\IFS\nouraures_connector/service/data/medecins.pickle [+]
+Utils - getFile - INFO - 67 - 2019-07-11 19:07:10,568 - [+] Unpickling F:\IFS\nouraures_connector/service/data/types_intervention.pickle [+]
+Utils - getFile - INFO - 67 - 2019-07-11 19:07:10,568 - [+] Unpickling F:\IFS\nouraures_connector/service/data/types_intervention.pickle [+]
+Orm - __init__ - INFO - 19 - 2019-07-11 19:07:10,569 - [+] Initilizing Orm [+]
+Orm - check_table - INFO - 44 - 2019-07-11 19:07:10,866 - 	[+] Checking table hl7_connections if it exist [+]
+Orm - __init__ - INFO - 37 - 2019-07-11 19:07:10,883 - [+] Orm initialized [+]
+
+
+Orm - get_examen - INFO - 84 - 2019-07-11 19:07:11,020 - 	[+] get_examen [+]
+Orm - get_examen - INFO - 85 - 2019-07-11 19:07:11,020 - 	[+] id_examen 10925 [+]
+all - <module> - DEBUG - 111 - 2019-07-11 19:07:11,027 - [+] EXAMEN_ROW (10925, 4378, datetime.datetime(2019, 5, 26, 17, 9, 4), None, None, 103, 2, None, 7, 0, None, 0, 'auto', 0, 17000, 0, '', 0) [+]
+Orm - get_patient - INFO - 144 - 2019-07-11 19:07:11,028 - 	[+] get_patient [+]
+Orm - get_patient - INFO - 145 - 2019-07-11 19:07:11,028 - 	[+] id_examen 10925 [+]
+all - <module> - DEBUG - 116 - 2019-07-11 19:07:11,035 - [+] PATIENT_ROW (4378, 'hani ', 'bouras', 'Homme', datetime.date(2001, 11, 11), 'cité du grand cerf bezons paris', '623730464', '', datetime.datetime(2019, 5, 26, 16, 5, 49)) [+]
+Orm - get_types_intervention - INFO - 98 - 2019-07-11 19:07:11,036 - 	[+] get_type_intervention [+]
+Orm - get_types_intervention - INFO - 99 - 2019-07-11 19:07:11,036 - 	[+] id_examen 10925 [+]
+all - <module> - DEBUG - 121 - 2019-07-11 19:07:11,042 - [+] TYPES_INTERVENTION_ROW (103, 'Abdominale : hépatique/ pancréatique/ rénale/\r\nsurrénalienne', 7, 17000, 25000, 35, None, None, 0, None) [+]
+Orm - get_medecin - INFO - 119 - 2019-07-11 19:07:11,042 - 	[+] get_type_intervention [+]
+Orm - get_medecin - INFO - 120 - 2019-07-11 19:07:11,043 - 	[+] id_examen 10925 [+]
+Orm - get_medecin - WARNING - 131 - 2019-07-11 19:07:11,046 - 	 [-] types_intervention not found interv : 0, presc: 0 [-]
+all - <module> - DEBUG - 127 - 2019-07-11 19:07:11,046 - [+] wtf [+]
+all - <module> - DEBUG - 131 - 2019-07-11 19:07:11,046 - [+] 0 [+]
+all - <module> - DEBUG - 139 - 2019-07-11 19:07:11,046 - [+] RPPS 0 [+]
+all - <module> - DEBUG - 147 - 2019-07-11 19:07:11,046 - [+] CODE_PRESC 0 [+]
+all - <module> - CRITICAL - 164 - 2019-07-11 19:07:11,047 - [-] Critical error, the medecin intervenent was not found [-]
+all - <module> - INFO - 165 - 2019-07-11 19:07:11,047 - PROCESS FINISHED IN  0.4813387393951416 seconds 
+
+
+Utils - getFile - INFO - 67 - 2019-07-11 19:13:18,868 - [+] Unpickling F:\IFS\nouraures_connector/service/data/medecins.pickle [+]
+Utils - getFile - INFO - 67 - 2019-07-11 19:13:18,870 - [+] Unpickling F:\IFS\nouraures_connector/service/data/types_intervention.pickle [+]
+Utils - getFile - INFO - 67 - 2019-07-11 19:13:18,870 - [+] Unpickling F:\IFS\nouraures_connector/service/data/types_intervention.pickle [+]
+Orm - __init__ - INFO - 19 - 2019-07-11 19:13:18,872 - [+] Initilizing Orm [+]
+Orm - check_table - INFO - 44 - 2019-07-11 19:13:19,262 - 	[+] Checking table hl7_connections if it exist [+]
+Orm - __init__ - INFO - 37 - 2019-07-11 19:13:19,285 - [+] Orm initialized [+]
+
+
+Orm - get_examen - INFO - 84 - 2019-07-11 19:13:19,467 - 	[+] get_examen [+]
+Orm - get_examen - INFO - 85 - 2019-07-11 19:13:19,467 - 	[+] id_examen 10925 [+]
+all - <module> - DEBUG - 110 - 2019-07-11 19:13:19,478 - [+] EXAMEN_ROW (10925, 4378, datetime.datetime(2019, 5, 26, 17, 9, 4), None, None, 103, 2, None, 7, 0, None, 0, 'auto', 0, 17000, 0, '', 0) [+]
+Orm - get_patient - INFO - 144 - 2019-07-11 19:13:19,478 - 	[+] get_patient [+]
+Orm - get_patient - INFO - 145 - 2019-07-11 19:13:19,478 - 	[+] id_examen 10925 [+]
+all - <module> - DEBUG - 115 - 2019-07-11 19:13:19,488 - [+] PATIENT_ROW (4378, 'hani ', 'bouras', 'Homme', datetime.date(2001, 11, 11), 'cité du grand cerf bezons paris', '623730464', '', datetime.datetime(2019, 5, 26, 16, 5, 49)) [+]
+Orm - get_types_intervention - INFO - 98 - 2019-07-11 19:13:19,488 - 	[+] get_type_intervention [+]
+Orm - get_types_intervention - INFO - 99 - 2019-07-11 19:13:19,488 - 	[+] id_examen 10925 [+]
+all - <module> - DEBUG - 120 - 2019-07-11 19:13:19,498 - [+] TYPES_INTERVENTION_ROW (103, 'Abdominale : hépatique/ pancréatique/ rénale/\r\nsurrénalienne', 7, 17000, 25000, 35, None, None, 0, None) [+]
+Orm - get_medecin - INFO - 119 - 2019-07-11 19:13:19,498 - 	[+] get_type_intervention [+]
+Orm - get_medecin - INFO - 120 - 2019-07-11 19:13:19,498 - 	[+] id_examen 10925 [+]
+Orm - get_medecin - WARNING - 131 - 2019-07-11 19:13:19,501 - 	 [-] types_intervention not found interv : 0, presc: 0 [-]
+all - <module> - DEBUG - 126 - 2019-07-11 19:13:19,502 - [+] wtf [+]
+all - <module> - INFO - 130 - 2019-07-11 19:13:19,502 - [+] Getting the RPPS [+]
+all - <module> - DEBUG - 139 - 2019-07-11 19:13:19,502 - [+] RPPS 0 [+]
+all - <module> - INFO - 145 - 2019-07-11 19:13:19,502 - [+] Getting the CODE_PRESC [+]
+all - <module> - DEBUG - 151 - 2019-07-11 19:13:19,502 - [+] CODE_PRESC 0 [+]
+all - <module> - INFO - 156 - 2019-07-11 19:13:19,503 - [+] Executing main thread [+]
+all - <module> - CRITICAL - 176 - 2019-07-11 19:13:19,503 - [-] Critical error, the medecin intervenent was not found [-]
+all - <module> - INFO - 177 - 2019-07-11 19:13:19,503 - PROCESS FINISHED IN  0.6352014541625977 seconds 
+
+
+Utils - getFile - INFO - 67 - 2019-07-13 10:37:32,886 - [+] Unpickling F:\IFS\nouraures_connector/service/data/medecins.pickle [+]
+Utils - getFile - INFO - 67 - 2019-07-13 10:37:32,950 - [+] Unpickling F:\IFS\nouraures_connector/service/data/types_intervention.pickle [+]
+Utils - getFile - INFO - 67 - 2019-07-13 10:37:32,950 - [+] Unpickling F:\IFS\nouraures_connector/service/data/types_intervention.pickle [+]
+Orm - __init__ - INFO - 19 - 2019-07-13 10:37:32,966 - [+] Initilizing Orm [+]
+Orm - check_table - INFO - 44 - 2019-07-13 10:37:33,944 - 	[+] Checking table hl7_connections if it exist [+]
+Orm - __init__ - INFO - 37 - 2019-07-13 10:37:33,973 - [+] Orm initialized [+]
+
+
