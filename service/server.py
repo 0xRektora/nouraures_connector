@@ -5,7 +5,7 @@ import conf, logging
 
 class HlsevenProtocol(Protocol):
     def __init__(self, factory):
-        self.logger = conf._init_logger(logger=conf.LOGGER_SERVER, filehandler=conf.LOG_DEBUG)
+        self.logger = conf._init_logger(logger=conf.LOGGER_SERVER)
         self.logger = logging.getLogger(conf.LOGGER_SERVER)
 
         self.logger.info("[+] Initilizing Server [+]")
@@ -30,6 +30,7 @@ class HlsevenProtocol(Protocol):
         """
             Fire up when data is received
         """
+        # TODO Check for the ACK
         data = self.decodeData(data)
         self.logger.info(f"[+] data received [+]")
         self.logger.info(f"{data}")

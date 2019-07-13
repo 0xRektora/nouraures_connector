@@ -4,30 +4,33 @@ import uuid  # TODO REMOVE
 from utils import Singleton
 
 
-class Hlseven(Message, Singleton):
+class Hlseven(Message):
     """
     Class that'll take care of the Hlseven messages
     """
 
     def __init__(self):
-        self.logger = conf._init_logger(logger=conf.LOGGER_HL7)
-        self.logger = logging.getLogger(conf.LOGGER_HL7)
-        self.logger.debug("[-] Hlseven initialized [-]")
+        logger = conf._init_logger(logger=conf.LOGGER_HL7)
+        logger = logging.getLogger(conf.LOGGER_HL7)
+        logger.debug("[-] Hlseven initialized [-]")
+
         super().__init__()
-        self.name = "ORM_01"
-        self.init_msh()
+
+        self.name = "ORM_O01"
+
+        self.init_msh(logger)
         self.init_pid()
         self.init_pv1()
         self.init_orc()
         self.init_obr()
 
-        self.logger.debug("[+] Hlseven initialized [+]")
+        logger.debug("[+] Hlseven initialized [+]")
 
-    def init_msh(self):
+    def init_msh(self, logger):
         """
             Function that init the msh headers
         """
-        self.logger.debug("[-] Init MSH [-]")
+        logger.debug("[-] Init MSH [-]")
         self.msh.msh_1 = "|"
         self.msh.msh_3 = "NourauresConnector"
         self.msh.msh_4 = "NourAures"
@@ -39,7 +42,7 @@ class Hlseven(Message, Singleton):
         self.msh.msh_11 = "P"
         self.msh.msh_12 = "2.3.1"
         self.msh.msh_15 = "NE"
-        self.logger.debug("[+] Init MSH [+]")
+        logger.debug("[+] Init MSH [+]")
 
     def init_pid(self):
         self.add_segment("PID")
@@ -57,4 +60,3 @@ class Hlseven(Message, Singleton):
 if __name__ == "__main__":
     import conf
     m = Hlseven()
-    m.logger.debug("\n"+m.to_er7(trailing_children=True))

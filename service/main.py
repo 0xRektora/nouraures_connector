@@ -7,6 +7,11 @@ from orm import Orm
 from hl7 import Hlseven
 import sys
 import pickle
+import server
+from twisted.internet.protocol import Factory, Protocol
+from twisted.internet.endpoints import TCP4ServerEndpoint
+from twisted.internet import reactor
+
 """
     Main entrypoint of the NourAures Connector
 """
@@ -30,9 +35,14 @@ if len(sys.argv) > 1:
         logger.critical(
             f"[+] Can't find the EXAMEN_ID in the arguments passed : {sys.argv} [+]")
 
-# Read the CSV files
-EVOLUCARE_MEDECIN = utils.getFile(conf.STATIC_MEDECIN)
-EVOLUCARE_TYPES_INTERVENTION = utils.getFile(conf.STATIC_TYPE_INTERVENTION)
+try:
+    # Read the CSV files
+    EVOLUCARE_MEDECIN = utils.getFile(conf.STATIC_MEDECIN)
+    EVOLUCARE_TYPES_INTERVENTION = utils.getFile(conf.STATIC_TYPE_INTERVENTION)
+except Exception as e:
+    logger.critical("[-] Cannot init EVOLUCARE_MEDECIN and EVOLUCARE_TYPES_INTERVENTION [-]")
+    logger.critical(f"[-] ERROR : {e} [-]")
+
 
 EXAMEN_ROW = None  # Will contain the examen row
 PATIENT_ROW = None  # Will contain the patient row
@@ -43,8 +53,12 @@ TYPES_INTERVENTION_ROW = None
 
 ORM_MSG = None  # Will contain the orm message in STR
 
-orm = Orm()
-hlseven = Hlseven()
+try:
+    orm = Orm()
+    hlseven = Hlseven()
+except Exception as e:
+    logger.critical("[-] Cannot init orm and hlseven [-]")
+    logger.critical(f"[-] ERROR : {e} [-]")
 
 
 def constructHl7Orm(hlseven, patient, examen, medecin, type_intervention, RPPS, CODE_PRESC, dicom_mod):
@@ -123,7 +137,7 @@ data = orm.get_medecin(EXAMENS_ID)
 if(data):
     MEDECIN_ROWS = (list(data[0]), list(data[1]))
     logger.debug(f"[+] MEDECIN_ROWS {MEDECIN_ROWS} [+]")
-logger.debug(f"[+] wtf [+]")
+
 
 # We map the RPPPS of the current medecin_interv
 RPPS = 0
@@ -169,8 +183,14 @@ try:
 
         logger.debug(str(ORM_MSG).encode("utf8"))
 
-        # TODO implement server
-        # logger.info("[+] Initializing the server [+]")
+        logger.info("[+] Initializing the server [+]")
+
+        endpoint = TCP4ServerEndpoint(reactor, conf.SERVER_PORT)
+        endpoint.listen(server.HlsevenFactory(hlseven))
+        logger.info(f"[+] Running the server [+]")
+        reactor.run() #pylint: disable=no-member
+
+
         logger.info(f"PROCESS FINISHED IN  {time.time() - TIME} seconds \n\n")
     else:
         logger.critical("[-] Critical error, the medecin intervenent was not found [-]")
