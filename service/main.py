@@ -185,6 +185,7 @@ try:
 
         logger.info("[+] Initializing the server [+]")
 
+        # Launching the server
         endpoint = TCP4ServerEndpoint(reactor, conf.SERVER_PORT)
         endpoint.listen(server.HlsevenFactory(hlseven))
         logger.info(f"[+] Running the server [+]")

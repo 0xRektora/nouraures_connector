@@ -18,6 +18,7 @@ class Hlseven(Message):
 
         self.name = "ORM_O01"
 
+        # Initing all the segment of the HL7 message
         self.init_msh(logger)
         self.init_pid()
         self.init_pv1()

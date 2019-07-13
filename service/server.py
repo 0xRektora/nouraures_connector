@@ -62,7 +62,9 @@ class HlsevenProtocol(Protocol):
 
 
 class HlsevenFactory(Factory):
-
+    """
+        The factory class of the Hlseven server
+    """
     def __init__(self, hl7):
         self.hl7 = hl7
 
