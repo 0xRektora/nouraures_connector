@@ -40,7 +40,8 @@ try:
     EVOLUCARE_MEDECIN = utils.getFile(conf.STATIC_MEDECIN)
     EVOLUCARE_TYPES_INTERVENTION = utils.getFile(conf.STATIC_TYPE_INTERVENTION)
 except Exception as e:
-    logger.critical("[-] Cannot init EVOLUCARE_MEDECIN and EVOLUCARE_TYPES_INTERVENTION [-]")
+    logger.critical(
+        "[-] Cannot init EVOLUCARE_MEDECIN and EVOLUCARE_TYPES_INTERVENTION [-]")
     logger.critical(f"[-] ERROR : {e} [-]")
 
 
@@ -61,63 +62,6 @@ except Exception as e:
     logger.critical(f"[-] ERROR : {e} [-]")
 
 
-def constructHl7Orm(hlseven, patient, examen, medecin, type_intervention, RPPS, CODE_PRESC, dicom_mod):
-    """
-        Function that take in param the orm object for patient and examen
-        return a fully constructed hl7 object
-    """
-    # Construct the PID segment
-    # ID_PATIENT^^^LOGICIEL_GAP
-    hlseven.pid.pid_3 = str(patient[0]) + "^^^" + "NourauresConnector"
-    # NOM_PATIENT^PRENOM_PATIENT
-    hlseven.pid.pid_5 = str(patient[2] + "^" + patient[1])
-    hlseven.pid.pid_7 = str(patient[4].strftime(
-        conf.DT_FORMAT))  # DOB : YYYYMMDD
-    # M : MALE / F : FEMALE / O : OTHER / U : UKNOWN
-    hlseven.pid.pid_8 = "M" if str(patient[3]).lower() == "homme" else "F"
-
-    # Construct the PV1 segment
-    hlseven.pv1.pv1_2 = "O"  # O : OUTPUT
-    hlseven.pv1.pv1_3 = "EXTERNE"  # EXTERNE
-    # TODO IMPLEMENT
-    # CODE_RADIOLOGGUE^^^^^^^^^^^^^RPPS
-    hlseven.pv1.pv1_8 = str(RPPS) + "^^^^^^^^^^^^^RPPS"
-    # DATE_ADMISSION : YYYYMMDDHHMMSS
-    hlseven.pv1.pv1_44 = str(examen[2].strftime(conf.DT_FORMAT))
-
-    # Construct the ORC segment
-    hlseven.orc.orc_1 = "NW"  # Order Control NW
-    hlseven.orc.orc_3 = str(examen[0])  # Filler Order Number NUMERO_EXAMEN
-    hlseven.orc.orc_7 = "^^^" + \
-        str(examen[2].strftime(conf.DT_FORMAT))  # ^^^DATE_ADMISSION
-    # DATE_ADMISSION : YYYYMMDDHHMMSS
-    hlseven.orc.orc_9 = str(examen[2].strftime(conf.DT_FORMAT))
-    # TODO IMPLEMENT
-    hlseven.orc.orc12 = str(CODE_PRESC) + "^" + str(medecin[1][1]) + "^" + str(medecin[1][1]) + \
-        "^^^^^^^^^^" + \
-        str(CODE_PRESC)  # CODE_PRESCRIPTEUR^NOM^PRENOM^^^^^^^^^^RPPS
-
-    # Construct the OBR segment
-    # CODE_EXAMEN^TITRE_EXAMEN
-    hlseven.obr.obr_4 = str(
-        type_intervention[0]) + "^" + str(type_intervention[1])
-    """
-    MODALITE :
-        - CR : RADIO
-        - CT : SCANNER
-        - MR : IRM
-        - XA : ANGIO
-        - ES : ENDOSCOPIE
-        - US : ECHOGRAPHIE
-        - PX : PANORAMIQUE
-    """
-    hlseven.obr.obr_24 = dicom_mod  # Diagnostic Serv Sect ID, MODALITE
-    hlseven.obr.obr_27 = "^^^" + \
-        str(examen[2].strftime(conf.DT_FORMAT))  # ^^^DATE_ADMISSION
-
-    return hlseven
-
-
 data = orm.get_examen(EXAMENS_ID)
 if(data):
     EXAMEN_ROW = list(data)[0]
@@ -132,6 +76,12 @@ data = orm.get_types_intervention(EXAMENS_ID)
 if(data):
     TYPES_INTERVENTION_ROW = list(data)[0]
     logger.debug(f"[+] TYPES_INTERVENTION_ROW {TYPES_INTERVENTION_ROW} [+]")
+
+# Check if the type intervention is in type_intervention csv
+if list(filter(lambda x: str(x[0]) == str(TYPES_INTERVENTION_ROW[0]), EVOLUCARE_TYPES_INTERVENTION)):
+    logger.info(f"[+] {TYPES_INTERVENTION_ROW[0]} found, continuing operations. [+]")
+else:
+    logger.info(f"[+] {TYPES_INTERVENTION_ROW[0]} not resolved into {conf.STATIC_TYPE_INTERVENTION} [+]")
 
 data = orm.get_medecin(EXAMENS_ID)
 if(data):
@@ -175,8 +125,8 @@ try:
 
         logger.info("[+] Constructing the HL7 message [+]")
         # We construct the hlseven class with all the information
-        hlseven = constructHl7Orm(hlseven, PATIENT_ROW, EXAMEN_ROW,
-                                MEDECIN_ROWS, TYPES_INTERVENTION_ROW, RPPS, CODE_PRESC, dicom_mod)
+        hlseven = utils.constructHl7Orm(hlseven, PATIENT_ROW, EXAMEN_ROW,
+                                        MEDECIN_ROWS, TYPES_INTERVENTION_ROW, RPPS, CODE_PRESC, dicom_mod)
 
         # We assign the var with the hl7 message
         ORM_MSG = hlseven.to_er7(trailing_children=True)
@@ -189,14 +139,15 @@ try:
         endpoint = TCP4ServerEndpoint(reactor, conf.SERVER_PORT)
         endpoint.listen(server.HlsevenFactory(hlseven))
         logger.info(f"[+] Running the server [+]")
-        reactor.run() #pylint: disable=no-member
-
+        reactor.run()  # pylint: disable=no-member
 
         logger.info(f"PROCESS FINISHED IN  {time.time() - TIME} seconds \n\n")
     else:
-        logger.critical("[-] Critical error, the medecin intervenent was not found [-]")
+        logger.critical(
+            "[-] Critical error, the medecin intervenent was not found [-]")
         logger.info(f"PROCESS FINISHED IN  {time.time() - TIME} seconds \n\n")
 except Exception as e:
-    logger.critical("[-] Critical error occured while executing main thread [-]")
+    logger.critical(
+        "[-] Critical error occured while executing main thread [-]")
     logger.critical(f"[-] ERROR : {e} [-]")
     logger.info(f"PROCESS FINISHED IN  {time.time() - TIME} seconds \n\n")

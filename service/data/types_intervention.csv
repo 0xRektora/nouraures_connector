@@ -77,8 +77,7 @@ ID_BD_GAP;CODE;title;id_section;dicom_mod
 72;MR05;IRM Cérébro-orbitaire;7;MR
 73;MR06;IRM Cérébro-cervicale;7;MR
 74;MR07;IRM Cérébro-médullaire;7;MR
-75;MR08;"IRM Angles ponto-cérébelleux et des CAI (APC et
-CAI), IRM des oreilles";7;MR
+75;MR08;IRM Angles ponto-cérébelleux et des CAI (APC et CAI), IRM des oreilles;7;MR
 76;MR09;IRM Faciale/ cervico-faciale;7;MR
 77;MR10;IRM Cavum;7;MR
 78;MR11;IRM Larynx;7;MR
@@ -109,13 +108,11 @@ CAI), IRM des oreilles";7;MR
 96;MR19;IRM Cheville;7;MR
 97;MR20;IRM Pied / Avant-pied;7;MR
 98;MR21;IRM Parties molles;7;MR
-99;MR22;"IRM Extrémité (bras, avant-bras, cuisse/fémur,
-jambe)";7;MR
+99;MR22;IRM Extrémité (bras, avant-bras, cuisse/fémur,jambe);7;MR
 100;MR23;IRM Rachis cervical;7;MR
 101;MR24;IRM Rachis lombaire;7;MR
 102;MR25;IRM Rachis total (médullaire);7;MR
-103;MR26;"IRM Abdominale : hépatique/ pancréatique/ rénale/
-surrénalienne";7;MR
+103;MR26;IRM Abdominale : hépatique/ pancréatique/ rénale/ surrénalienne;7;MR
 104;MR27;Bili IRM (bili mr);7;MR
 105;MR28;Uro IRM;7;MR
 106;MR29;Entéro irm (entéro mr);7;MR

@@ -1,62 +1,57 @@
 PROFIL;NOM;PRENOM;N°RPPS
 ;;;
 secretaire medicale;LAMMARI;Ahlem;
-;AOUF;ilhem;
-;SOUISSI;fahima;
-;DIB eps SOUM;NARIMENE;
-;CHEBIL eps MADAME;TASSADIT;
-;TERITRI;HOURIA;
+secretaire medicale;AOUF;ilhem;
+secretaire medicale;SOUISSI;fahima;
+secretaire medicale;DIB eps SOUM;NARIMENE;
+secretaire medicale;CHEBIL eps MADAME;TASSADIT;
+secretaire medicale;TERITRI;HOURIA;
 manipulateur radio;SIOUEN;Wahiba;
-;AGGOUN;Asma;
-;FARHI;Saliha;
-;BOUMAAZA;Imen;
+manipulateur radio;AGGOUN;Asma;
+manipulateur radio;FARHI;Saliha;
+manipulateur radio;BOUMAAZA;Imen;
 surveillante gastro;AMMARI;Hakima;
 surveillante radio;SIOUEN;;
 radiologue;NEDJAHI;;2019001
-;BOURAS;;2019002
-;TAGUEMOUNT;;2019003
-;SOUIFI;;2019004
-;AMAR;;2019005
-;SAHAR;;2019006
-;ZAROUAL;;2019007
-;HALIMI;;2019008
-;NABI;;2019009
-;BADRI;;2019010
-;HARRIDI;;2019011
-;MADKOUR;;2019012
-;TOUATI;;2019013
-;KRASSEDI;;2019014
-;HAMAOUI;;2019015
-;MERRAD;;2019016
-;AZOUI;;2019017
-;SI ABDI;;2019018
-;HACHANI;;2019019
+radiologue;BOURAS;;2019002
+radiologue;TAGUEMOUNT;;2019003
+radiologue;SOUIFI;;2019004
+radiologue;AMAR;;2019005
+radiologue;SAHAR;;2019006
+radiologue;ZAROUAL;;2019007
+radiologue;HALIMI;;2019008
+radiologue;NABI;;2019009
+radiologue;BADRI;;2019010
+radiologue;HARRIDI;;2019011
+radiologue;MADKOUR;;2019012
+radiologue;TOUATI;;2019013
+radiologue;KRASSEDI;;2019014
+radiologue;HAMAOUI;;2019015
+radiologue;MERRAD;;2019016
+radiologue;AZOUI;;2019017
+radiologue;SI ABDI;;2019018
+radiologue;HACHANI;;2019019
 cardiologue;CHERIF;;2019020
 gastro-enterologue;BOUCHEMEL;;2019021
-;BEN HAMADA;;2019022
-;LOUZINI;;2019023
-;HAMMOUCHE;;2019024
-;BEN ATTA;;2019025
-;BAKIRI;;2019026
-;RABHI;;2019027
-;AIT BELKACEM;;2019028
+gastro-enterologue;BEN HAMADA;;2019022
+gastro-enterologue;LOUZINI;;2019023
+gastro-enterologue;HAMMOUCHE;;2019024
+gastro-enterologue;BEN ATTA;;2019025
+gastro-enterologue;BAKIRI;;2019026
+gastro-enterologue;RABHI;;2019027
+gastro-enterologue;AIT BELKACEM;;2019028
 généraliste;SOUAS;;2019029
-;SAIDI;;2019030
-;MEFTI;;2019031
-;KORICHI;;2019032
-;MAHDJOUBI;;2019033
-;BERCHICHE;;2019034
-;NECHE;;2019035
-;ZAIANI;;2019036
-;BERRIM;;2019037
-;BEN ARABA;;2019038
+généraliste;SAIDI;;2019030
+généraliste;MEFTI;;2019031
+généraliste;KORICHI;;2019032
+généraliste;MAHDJOUBI;;2019033
+généraliste;BERCHICHE;;2019034
+généraliste;NECHE;;2019035
+généraliste;ZAIANI;;2019036
+généraliste;BERRIM;;2019037
+généraliste;BEN ARABA;;2019038
 reanimateur;BOUZENADA;;2019039
-;KADOUM;;2019040
-;BENGHANEM;;2019041
-;HADDOUCHE;;2019042
+reanimateur;KADOUM;;2019040
+reanimateur;BENGHANEM;;2019041
+reanimateur;HADDOUCHE;;2019042
 administrateur; Dr AURES;;2019043
-;;;
-;;;
-;;;
-;;;
-;;;
