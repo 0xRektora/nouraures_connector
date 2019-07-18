@@ -78,6 +78,7 @@ if(data):
     logger.debug(f"[+] TYPES_INTERVENTION_ROW {TYPES_INTERVENTION_ROW} [+]")
 
 # Check if the type intervention is in type_intervention csv
+print(EVOLUCARE_TYPES_INTERVENTION)
 if list(filter(lambda x: str(x[0]) == str(TYPES_INTERVENTION_ROW[0]), EVOLUCARE_TYPES_INTERVENTION)):
     logger.info(f"[+] {TYPES_INTERVENTION_ROW[0]} found, continuing operations. [+]")
 else:
@@ -129,7 +130,7 @@ try:
                                         MEDECIN_ROWS, TYPES_INTERVENTION_ROW, RPPS, CODE_PRESC, dicom_mod)
 
         # We assign the var with the hl7 message
-        ORM_MSG = hlseven.to_er7(trailing_children=True)
+        ORM_MSG = hlseven.to_er7()
 
         logger.debug(str(ORM_MSG).encode("utf8"))
 
