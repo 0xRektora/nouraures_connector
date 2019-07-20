@@ -30,7 +30,7 @@ if len(sys.argv) > 1:
         conf.STATIC_TYPE_INTERVENTION = "/data/types_intervention.csv"
         with open("php_call.txt", "a") as f:
             f.writelines(
-                f"System called at {datetime.datetime.now().strftime(conf.DT_FORMAT)} : argv : {sys.argv}\n")
+                f"System called at {datetime.datetime.now().strftime('%Y/%m/%d')} : argv : {sys.argv}\n")
     except:
         logger.critical(
             f"[+] Can't find the EXAMEN_ID in the arguments passed : {sys.argv} [+]")
@@ -78,7 +78,6 @@ if(data):
     logger.debug(f"[+] TYPES_INTERVENTION_ROW {TYPES_INTERVENTION_ROW} [+]")
 
 # Check if the type intervention is in type_intervention csv
-print(EVOLUCARE_TYPES_INTERVENTION)
 if list(filter(lambda x: str(x[0]) == str(TYPES_INTERVENTION_ROW[0]), EVOLUCARE_TYPES_INTERVENTION)):
     logger.info(f"[+] {TYPES_INTERVENTION_ROW[0]} found, continuing operations. [+]")
 else:
@@ -90,11 +89,12 @@ if(data):
     logger.debug(f"[+] MEDECIN_ROWS {MEDECIN_ROWS} [+]")
 
 
-# We map the RPPPS of the current medecin_interv
+# We map the RPPS of the current medecin_interv
 RPPS = 0
 logger.info(f"[+] Getting the RPPS [+]")
 try:
-    if MEDECIN_ROWS:
+    if MEDECIN_ROWS[0]:        
+        logger.debug(f"[+] MEDECIN_ROW {MEDECIN_ROWS[0]} [+]")
         for row in EVOLUCARE_MEDECIN:
             logger.debug(f"[+] {row} [+]")
             if row[1] == MEDECIN_ROWS[0][1] and row[2] == MEDECIN_ROWS[0][2]:
@@ -105,21 +105,23 @@ try:
 except Exception as e:
     logger.critical(f"[-] CRITICAL ERROR OCCURED : {e} [-]")
 
-# We map the RPPPS of the current medecin_presc, if it does't exist put nothing
+# We map the RPPS of the current medecin_presc, if it does't exist put the RPPS
 CODE_PRESC = 0
 logger.info(f"[+] Getting the CODE_PRESC [+]")
 try:
-    if MEDECIN_ROWS:
+    if MEDECIN_ROWS[1]:
         for row in EVOLUCARE_MEDECIN:
             if row[1] == MEDECIN_ROWS[1][1] and row[2] == MEDECIN_ROWS[1][2]:
                 CODE_PRESC = row[3]
+    else:
+        CODE_PRESC = RPPS
     logger.debug(f"[+] CODE_PRESC {CODE_PRESC} [+]")
 except Exception as e:
     logger.critical(f"[-] CRITICAL ERROR OCCURED : {e} [-]")
 
 try:
     logger.info("[+] Executing main thread [+]")
-    if MEDECIN_ROWS:
+    if RPPS:
         # We get the dicom_mod
         dicom_mod = EVOLUCARE_TYPES_INTERVENTION[TYPES_INTERVENTION_ROW[0]][4]
         logger.debug(f"[+] dicom_mod {dicom_mod} [+]")

@@ -85,6 +85,7 @@ def constructHl7Orm(hlseven, patient, examen, medecin, type_intervention, RPPS, 
         Function that take in param the orm object for patient and examen
         return a fully constructed hl7 object
     """
+    import conf
     # Construct the PID segment
     # ID_PATIENT^^^LOGICIEL_GAP
     hlseven.pid.pid_3 = str(patient[0]) + "^^^" + "NourauresConnector"

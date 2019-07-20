@@ -34,7 +34,7 @@ class Orm(Singleton):
         self.patients = sqlalchemy.Table("patients", self.metadata)
         self.medecins = sqlalchemy.Table("medecins", self.metadata)
         self.types_interventions = sqlalchemy.Table("types_intervention", self.metadata)
-        self.logger.info("[+] Orm initialized [+]\n\n")
+        self.logger.info("[+] Orm initialized [+]")
 
     def check_table(self,):
         import datetime
