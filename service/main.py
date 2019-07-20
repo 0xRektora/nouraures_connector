@@ -93,7 +93,7 @@ if(data):
 RPPS = 0
 logger.info(f"[+] Getting the RPPS [+]")
 try:
-    if MEDECIN_ROWS[0]:        
+    if MEDECIN_ROWS is not None and MEDECIN_ROWS[0]:
         logger.debug(f"[+] MEDECIN_ROW {MEDECIN_ROWS[0]} [+]")
         for row in EVOLUCARE_MEDECIN:
             logger.debug(f"[+] {row} [+]")
@@ -103,13 +103,13 @@ try:
                 logger.debug(f"[+] {RPPS} [+]")
     logger.debug(f"[+] RPPS {RPPS} [+]")
 except Exception as e:
-    logger.critical(f"[-] CRITICAL ERROR OCCURED : {e} [-]")
+    logger.critical(e)
 
 # We map the RPPS of the current medecin_presc, if it does't exist put the RPPS
 CODE_PRESC = 0
 logger.info(f"[+] Getting the CODE_PRESC [+]")
 try:
-    if MEDECIN_ROWS[1]:
+    if MEDECIN_ROWS is not None and MEDECIN_ROWS[1]:
         for row in EVOLUCARE_MEDECIN:
             if row[1] == MEDECIN_ROWS[1][1] and row[2] == MEDECIN_ROWS[1][2]:
                 CODE_PRESC = row[3]
@@ -117,11 +117,13 @@ try:
         CODE_PRESC = RPPS
     logger.debug(f"[+] CODE_PRESC {CODE_PRESC} [+]")
 except Exception as e:
-    logger.critical(f"[-] CRITICAL ERROR OCCURED : {e} [-]")
+    logger.critical(e)
 
 try:
     logger.info("[+] Executing main thread [+]")
-    if RPPS:
+    # TODO remove
+    safe = True # testing purposes
+    if RPPS or safe:
         # We get the dicom_mod
         dicom_mod = EVOLUCARE_TYPES_INTERVENTION[TYPES_INTERVENTION_ROW[0]][4]
         logger.debug(f"[+] dicom_mod {dicom_mod} [+]")
@@ -138,11 +140,12 @@ try:
 
         logger.info("[+] Initializing the server [+]")
 
-        # Launching the server
-        endpoint = TCP4ServerEndpoint(reactor, conf.SERVER_PORT)
-        endpoint.listen(server.HlsevenFactory(hlseven))
-        logger.info(f"[+] Running the server [+]")
-        reactor.run()  # pylint: disable=no-member
+        # TODO uncomment
+        # # Launching the server
+        # endpoint = TCP4ServerEndpoint(reactor, conf.SERVER_PORT)
+        # endpoint.listen(server.HlsevenFactory(hlseven))
+        # logger.info(f"[+] Running the server [+]")
+        # reactor.run()  # pylint: disable=no-member
 
         logger.info(f"PROCESS FINISHED IN  {time.time() - TIME} seconds \n\n")
     else:

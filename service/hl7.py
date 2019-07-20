@@ -47,16 +47,15 @@ class Hlseven(Message):
 
     def init_pid(self):
         self.add_segment("PID")
-        self.pid.pid_10 = ""
+        self.pid.pid_11 = "" # Empty to respect the matrix
 
     def init_pv1(self):
         self.add_segment("PV1")
         self.pv1.pv1_44 = ""
 
-
     def init_orc(self):
         self.add_segment("ORC")
-        self.orc.orc_12 = ""
+        self.orc.orc_13 = ""
 
     def init_obr(self):
         self.add_segment("OBR")

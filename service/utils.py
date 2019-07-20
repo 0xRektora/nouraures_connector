@@ -3,7 +3,6 @@
 """
 
 
-
 class Singleton():
     """
         Class that'll apply the Singleton design pattern to the passed
@@ -12,11 +11,15 @@ class Singleton():
 
     def __new__(class_, *args, **kwargs):
         if class_ not in class_._instances:
-            class_._instances[class_] = super(Singleton, class_).__new__(class_, *args, **kwargs)
+            class_._instances[class_] = super(
+                Singleton, class_).__new__(class_, *args, **kwargs)
         return class_._instances[class_]
 
+
 def readXmlFile(csvPath):
-    import conf, csv, logging
+    import conf
+    import csv
+    import logging
     """
         Take a path into the param and convert the xml file into a python object
     """
@@ -46,6 +49,7 @@ def readXmlFile(csvPath):
     except:
         logger.critical(f"[+] Can't open the file {path} [+]")
 
+
 def getFile(static_path):
     """Return the choosen object,
     if it exist unpickle the object else read csv, pickle and return the object.
@@ -53,14 +57,19 @@ def getFile(static_path):
     Arguments:
         file {str} -- file name => conf.STATIC_MEDECIN / conf.STATIC_TYPE_INTERVENTION
     """
-    import pickle, os, conf, logging
+    import pickle
+    import os
+    import conf
+    import logging
 
     logger = conf._init_logger(logger=conf.LOGGER_UTILS)
     logger = logging.getLogger(conf.LOGGER_UTILS)
     try:
         pickle_format = ".pickle"
-        path_csv = conf.FULL_PATH + static_path # Full path to the csv file
-        path_pickle = conf.FULL_PATH + str(static_path).split(".")[0] + pickle_format # Full path to the pickle file
+        path_csv = conf.FULL_PATH + static_path  # Full path to the csv file
+        # Full path to the pickle file
+        path_pickle = conf.FULL_PATH + \
+            str(static_path).split(".")[0] + pickle_format
 
         # If the pickle file exist, load it and return it
         if(os.path.exists(path_pickle)):
@@ -79,6 +88,7 @@ def getFile(static_path):
     except Exception as e:
         logger.critical(f"[+] Can't find the file {static_path} [+]")
         logger.critical(e)
+
 
 def constructHl7Orm(hlseven, patient, examen, medecin, type_intervention, RPPS, CODE_PRESC, dicom_mod):
     """
@@ -112,10 +122,15 @@ def constructHl7Orm(hlseven, patient, examen, medecin, type_intervention, RPPS, 
         str(examen[2].strftime(conf.DT_FORMAT))  # ^^^DATE_ADMISSION
     # DATE_ADMISSION : YYYYMMDDHHMMSS
     hlseven.orc.orc_9 = str(examen[2].strftime(conf.DT_FORMAT))
-    # TODO IMPLEMENT
-    hlseven.orc.orc12 = str(CODE_PRESC) + "^" + str(medecin[1][1]) + "^" + str(medecin[1][1]) + \
-        "^^^^^^^^^^" + \
-        str(CODE_PRESC)  # CODE_PRESCRIPTEUR^NOM^PRENOM^^^^^^^^^^RPPS
+    # TODO nonetype
+    try:
+        hlseven.orc.orc_12 = str(CODE_PRESC) + "^" + str(medecin[1][1]) + "^" + str(
+            medecin[1][1]) + "^^^^^^^^^^" + str(CODE_PRESC)  # CODE_PRESCRIPTEUR^NOM^PRENOM^^^^^^^^^^RPPS
+    # TODO remove
+    except Exception:  # Testing purposes
+        hlseven.orc.orc_12 = "0" + "^" + "0" + "^" + "0" + \
+            "^^^^^^^^^^" + \
+            "0"
 
     # Construct the OBR segment
     # CODE_EXAMEN^TITRE_EXAMEN
