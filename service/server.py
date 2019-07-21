@@ -52,7 +52,8 @@ class HlsevenProtocol(Protocol):
         self.logger.info("[+] Sending the Hl7 object [+]")
         self.logger.debug(f"{self.factory.hl7}")
 
-        self.transport.write(self.encodeData(self.factory.hl7.to_er7(trailing_children=True)))
+        self.transport.write(self.encodeData(self.factory.hl7))
+        self.orm.insertHl7Connection(self.factory.hm7)
 
     def encodeData(self, data):
         return str(data).encode("utf8")
@@ -65,8 +66,9 @@ class HlsevenFactory(Factory):
     """
         The factory class of the Hlseven server
     """
-    def __init__(self, hl7):
+    def __init__(self, hl7, orm):
         self.hl7 = hl7
+        self.orm = orm
 
     def buildProtocol(self, addr):
         self.addr = addr

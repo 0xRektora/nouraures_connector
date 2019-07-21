@@ -142,8 +142,9 @@ try:
 
         # TODO uncomment
         # # Launching the server
+        # orm = Orm()
         # endpoint = TCP4ServerEndpoint(reactor, conf.SERVER_PORT)
-        # endpoint.listen(server.HlsevenFactory(hlseven))
+        # endpoint.listen(server.HlsevenFactory(hlseven, orm))
         # logger.info(f"[+] Running the server [+]")
         # reactor.run()  # pylint: disable=no-member
 
