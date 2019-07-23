@@ -7,14 +7,13 @@ ID_BD_GAP;CODE;title;id_section;dicom_mod
 8;RAD07;Radio Transit osoe-gastro-duodenal (TOGD) ;2;CR
 9;RAD08;Radio Lavement baryte (LB);2;CR
 10;RAD09;Radio Urographie intra veineuse (UIV);2;CR
-460;;test;1;CR
 11;RAD10;Radio Uretro-cystographie (UCR, CUM);2;CR
+12;RAD11;Fistulographie;2;CR
 13;ECHO01;Echographie Abdominale / abdomino-pelvienne;3;US
 14;ECHO02;Echographie Pelvienne/ rénale;3;US
 15;ECHO03;Echographie Scrotal (testiculaire);3;US
 16;ECHO04;Echographie Inguinale/ inguinoscrotal;3;US
 17;ECHO05;Echographie Parties molles;3;US
-12;;Fistulographie;RADIO;CR
 18;ECHO06;Echographie Cervicale (thyroidienne);3;US
 19;ECHO07;Echographie Genou, épaule, main, poignet, coude, cheville;3;US
 20;ECHO08;Echographie Abdomino-pelvienne et scrotale;3;US
@@ -26,8 +25,7 @@ ID_BD_GAP;CODE;title;id_section;dicom_mod
 26;ECHO17;Echo doppler Hepatique;4;US
 27;ECHO18;Echo doppler Scrotal (testiculaire);4;US
 28;CT01;Scanner Crane (cerebral);5;CT
-494;;copie echographie;3;US
-29;CT02;Cranio-facial (crane+sinus);5;CT
+29;CT02;Scanner Cranio-facial (crane+sinus);5;CT
 30;CT03;Scanner Orbitaire;5;CT
 31;CT04;Scanner Rochers (Oreilles);5;CT
 32;CT05;Scanner Sinus (massif facial);5;CT
@@ -37,14 +35,14 @@ ID_BD_GAP;CODE;title;id_section;dicom_mod
 36;CT09;Scanner Rachis cervical;5;CT
 37;CT10;Scanner Rachis dorsal;5;CT
 38;CT11;Scanner Rachis lombaire / lombo-sacre;5;CT
-39;CT12;Scanner epaule;5;CT
+39;CT12;Scanner Epaule;5;CT
 40;CT13;Scanner Thorax;5;CT
 41;CT14;Scanner Pelvien;5;CT
 42;CT15;Scanner Score calcique;5;CT
 43;CT16;Scanner Abdomen/Abdomino-pelvien;5;CT
 44;CT17;Uroscanner;5;CT
 45;CT18;Enteroscanner;5;CT
-46;CT19;Coloscanner ;5;CT
+46;CT19;Coloscanner;5;CT
 47;CT20;Scanner Rachis cervico-dorsal;5;CT
 48;CT21;Scanner Rachis dorso-lombaire;5;CT
 49;CT22;Scanner Rachis total (cervico-dorso-lombaire);5;CT
@@ -52,26 +50,22 @@ ID_BD_GAP;CODE;title;id_section;dicom_mod
 51;CT24;Scanner Thoraco-abdomino-pelvien (TAP);5;CT
 52;CT25;Arthroscanner (epaule, genou, cheville, poignet);5;CT
 53;CT26;Scanner TAGT (genou TAGT);5;CT
-54;CT30;Scanner Cérébral;6;CT
-55;CT31;Scanner Troncs supra aortiques (TSAO)/ cervical;6;CT
-56;CT32;Scanner Thoracique et des TSA;6;CT
-57;CT33;Scanner Cérébral et des TSA;6;CT
-58;CT34;Scanner Thoracique : pulmonaire, aorte thoracique;6;CT
+54;CT30;Angio Scanner Cérébral;6;CT
+55;CT31;Angio Scanner Troncs supra aortiques (TSAO)/ cervical;6;CT
+56;CT32;Angio Scanner Thoracique et des TSA;6;CT
+57;CT33;Angio Scanner Cérébral et des TSA;6;CT
+58;CT34;Angio Scanner Thoracique : pulmonaire, aorte thoracique;6;CT
 59;CT35;Coro scanner;6;CT
-60;CT36;Scanner Abdominal : aorte abdominale, des artères rénales;6;CT
-61;CT37;Scanner Membres supérieurs (MS);6;CT
-62;CT38;Scanner Membres inférieurs (MIF);6;CT
-63;CT39;Scanner Aortique (aorte totale, thoraco-abdominal);6;CT
-64;CT40;Scanner Aorte abdominale et des membres inférieurs;6;CT
-65;CT41;Scanner Aorte totale et des membres inférieurs;6;CT
-66;CT42;Scanner Hépatique (foie triphasique);6;CT
-67;CT43;Scanner Surrénalien (scanner surrénalien);6;CT
-446;;Denstascan;5;CT
-458;;sédation;5;CT
-497;;copie CD;5;CT
-498;;copie livre TDM;5;CT
+60;CT36;Angio Scanner Abdominal : aorte abdominale, des artères rénales;6;CT
+61;CT37;Angio Scanner Membres supérieurs (MS);6;CT
+62;CT38;Angio Scanner Membres inférieurs (MIF);6;CT
+63;CT39;Angio Scanner Aortique (aorte totale, thoraco-abdominal);6;CT
+64;CT40;Angio Scanner Aorte abdominale et des membres inférieurs;6;CT
+65;CT41;Angio Scanner Aorte totale et des membres inférieurs;6;CT
+66;CT42;Angio Scanner Hépatique (foie triphasique);6;CT
+67;CT43;Angio Scanner Surrénalien (scanner surrénalien);6;CT
 68;MR01;IRM Cérébrale;7;MR
-69;MR02;IRM hypophysaire;7;MR
+69;MR02;IRM Hypophysaire;7;MR
 70;MR03;IRM Orbitaire (yeux);7;MR
 71;MR04;IRM Cérébro-hypophysaire;7;MR
 72;MR05;IRM Cérébro-orbitaire;7;MR
@@ -81,20 +75,13 @@ ID_BD_GAP;CODE;title;id_section;dicom_mod
 76;MR09;IRM Faciale/ cervico-faciale;7;MR
 77;MR10;IRM Cavum;7;MR
 78;MR11;IRM Larynx;7;MR
-79;MRA00;Angio IRM Cérébrale ;8;MR
-79;MR44;IRM Cérébrale;7;MR
-80;MRA01;Angio IRM TSA;8;MR
-80;MR45;IRM TSA;7;MR
-81;MRA02;Angio IRM Aorte thoracique;8;MR
-81;MR46;IRM Aorte thoracique;7;MR
-82;MRA03;Angio IRM Aorte abdominale;8;MR
-82;MR47;IRM Aorte abdominale;7;MR
-83;MRA04;Angio IRM Aorte totale;8;MR
-83;MR48;IRM Aorte totale;7;MR
-84;MRA05;Angio IRM Artères rénales;8;MR
-84;MR49;IRM Artères rénales;7;MR
-85;MRA06;Angio IRM Membres inférieurs;8;MR
-85;MR50;IRM Membres inférieurs;7;MR
+79;MR44;Angio IRM Cérébrale;8;MR
+80;MR45;Angio IRM TSA;8;MR
+81;MR46;Angio IRM Aorte thoracique;8;MR
+82;MR47;Angio IRM Aorte abdominale;8;MR
+83;MR48;Angio IRM Aorte totale;8;MR
+84;MR49;Angio IRM Artères rénales;8;MR
+85;MR50;Angio IRM Membres inférieurs;8;MR
 86;MR12;IRM Epaule;7;MR
 87;MR13;IRM 02 épaules;7;MR
 88;MR14;IRM Genou;7;MR
@@ -106,9 +93,9 @@ ID_BD_GAP;CODE;title;id_section;dicom_mod
 94;MR17;IRM Main;7;MR
 95;MR18;IRM Poignet;7;MR
 96;MR19;IRM Cheville;7;MR
-97;MR20;IRM Pied / Avant-pied;7;MR
+97;MR20;IRM Pied / Avant-piedPied / Avant-pied;7;MR
 98;MR21;IRM Parties molles;7;MR
-99;MR22;IRM Extrémité (bras, avant-bras, cuisse/fémur,jambe);7;MR
+99;MR22;IRM Extrémité (bras, avant-bras, cuisse/fémur, jambe);7;MR
 100;MR23;IRM Rachis cervical;7;MR
 101;MR24;IRM Rachis lombaire;7;MR
 102;MR25;IRM Rachis total (médullaire);7;MR
@@ -120,457 +107,505 @@ ID_BD_GAP;CODE;title;id_section;dicom_mod
 108;MR31;IRM Pelvienne;7;MR
 109;MR32;IRM Périnéale;7;MR
 110;MR33;Fistulo irm;7;MR
+111;NU;Biopsie gastrique, duodénale, colique, polype gastrique ( 1 flacon ) ;10;
+112;NU;Biopsie gastrique, duodénale, colique ( 2 flacon ) ;10;
+113;NU;Biopsie gastrique, duodénale, colique ( 3 flacon ) ;10;
+114;NU;Biopsie gastrique, duodénale, colique ( 3 flacon ) ;10;
+115;NU;Biopsie gastrique, duodénale, colique ( 4 flacon ) ;10;
+116;NU;Biopsie gastrique, duodénale, colique ( 5 flacon);10;
+117;NU;Biopsie glandes salivaire;10;
+118;NU;Biopsie cavum;10;
+119;NU;Biopsie hépatique;10;
+120;NU;"Biopsie cutanée simple (verrue- naevus -condylome -
+kyste)";10;
+121;NU;Biopsie exérèse orientée par un fil repère;10;
+122;NU;Biopsie mammaire;10;
+123;NU;Biopsie bronchique, pleurale, pulmonaire;10;
+124;NU;Biopsie prostatique;10;
+125;NU;Copeaux de résection tm de vessie Ou copeaux de résection prostatiques;10;
+126;NU;Adénome de prostate;10;
+127;NU;Appendice ou vésicule biliaire (cholicystectomie);10;
+128;NU;"Produit dâ€™avortement 4500
+curetage biopsique de ";10;
+129;NU;curetage biopsique de lâ€™endocol;10;
+130;NU;Placenta;10;
+131;NU;Biopsie du col / polype du col ;10;
+132;NU;Angiome, amygdale, glande de Bartholin, végétations, ganglion, hydrocèle, varicocèle fistule anale, fistule pilonidale, hémorroÃ¯des, polype nasal;10;
+133;NU;"ThyroÃ¯dectomie totale
+";10;
+134;NU;Lobo-isthmectomie;10;
+135;NU;"Sein, colon, estomac, rectum, poumon, rein, vessie
+(résection dâ€™organe)";10;
+136;NU;Cystoprostatectomie ;10;
+137;NU;Hystérectomie totale avec annexectomie ;10;
+138;NU;Hystérectomie totale ou sub tot interannexielle;10;
+139;NU;Conisation;10;
+140;NU;Kyste ovarien fibrome utérin, adénofibrome du sein;10;
+141;NU;Annexectomie, grossesse extra utérine;10;
+142;NU;Frottis cervico-utérin  FCV;10;
+143;NU;Lames de cytoponction 1 Ã  4 lames;10;
+144;NU;Lames de cytoponction 5 Ã  8 lames et plus;10;
+145;NU;25-Hydroxy-Vitamine D   vit D3;11;
+146;NU;Ac Anti-Tg ( anticorps anti-thyroglobuline ) ;11;
+147;NU;Ac Anti-Tg ( anticorps anti-thyroglobuline ) ;11;
+148;NU;Ac Anti-TPO ( anticorps anti-thyroperoxydase ) ;11;
+149;NU;ACE ( antigène carcino-embryonnaire );11;
+150;NU;AFP ( alpha-foetoprotéine );11;
+151;NU;Albuminémie ;11;
+152;NU;Amylasémie ;11;
+153;NU;Amylasurie ;11;
+154;NU;ASLO ( Anti-StreptoLysines O );11;
+155;NU;B.L : Cholestérol-HDL ( high density lipoprotein ) ;11;
+156;NU;B.L : Cholestérol-LDL ( low density lipoprotein );11;
+157;NU;B.L : Cholestérol-total ;11;
+158;NU;B.L :Triglycérides  TG;11;
+159;NU;BÃªta-HCG (Hormone Chorionique Gonadotrope);11;
+160;NU;Bilharziose;11;
+161;NU;Bilirubinémie  Bil Direct et indirect;11;
+162;NU;BK ( bacille de Koch ) : bacilloscopie ;11;
+163;NU;BK ( bacille de Koch ) : culture;11;
+164;NU;Brucellose, sérologie;11;
+165;NU;BW ( Syphilis ) quantitatif;11;
+166;NU;CA 125 ;11;
+167;NU;CA 15-3;11;
+168;NU;CA 19-9 ;11;
+169;NU;Calcémie  Calcium  ca++;11;
+170;NU;Calciurie ;11;
+171;NU;Candida divers (Culture) ;11;
+172;NU;Candida selles (Culture) ;11;
+173;NU;Chimie des urines ;11;
+174;NU;CK-MB ( créatine phospho-kinase MB ) ;11;
+175;NU;Clairance de la créatinine;11;
+176;NU;CMV ( Cytomégalovirus ), sérologie IgG ;11;
+177;NU;CMV ( Cytomégalovirus ), sérologie IgM ;11;
+178;NU;Compte d'Addis-Hamburger ;11;
+179;NU;Coombs direct, TDA ( test direct Ã  l'antiglobuline ) ;11;
+180;NU;Coproculture ;11;
+181;NU;Copro-parasitologie ;11;
+182;NU;Cortisolémie;11;
+183;NU;Cortisolurie ;11;
+184;NU;CPK ( créatine phospho-kinase ) ;11;
+185;NU;Créatininémie  créea/urée;11;
+186;NU;Créatininurie ;11;
+187;NU;CRP, Protéine C-Réactive;11;
+188;NU;D-dimères;11;
+189;NU;Densité Urinaire;11;
+190;NU;Dépakinémie, acide valproÃ¯que;11;
+191;NU;E.C.B ECB du liquide synovial ;11;
+192;NU;E.C.B   ECB de pus;11;
+193;NU;E.C.B.U  ECBU des urines ;11;
+195;NU;E.C.B  ECB  du prélèvement vaginal ;11;
+196;NU;Electrophorèse de l'hémoglobine;11;
+197;NU;Electrophorèse des proteines;11;
+198;NU;Eosinophilie lacrymale;11;
+199;NU;Eosinophilie nasale ;11;
+200;NU;Esinophilie pharyngée ;11;
+201;NU;Estradiol ( E2 );11;
+202;NU;Examen chimique et E.C.B  ECB de liquide d'ascite ;11;
+203;NU;Examen chimique et E.C.B  ECB de liquide pleural ;11;
+204;NU;Examen Mycologique ;11;
+205;NU;Fer sérique ;11;
+206;NU;Férritinémie    feritinemie;11;
+207;NU;Fibrinogéne ;11;
+208;NU;Frottis sanguin ;11;
+209;NU;FSH ( hormone folliculostimulante humaine );11;
+210;NU;Gamma GT ;11;
+211;NU;Glucosurie des 24 h ;11;
+212;NU;Glycémie ;11;
+213;NU;Glycémie post-prandiale (GPP) ;11;
+214;NU;Goutte Epaisse ;11;
+215;NU;Groupage Phénotypé ;11;
+216;NU;Groupage sanguin  ;11;
+217;NU;HAV, sérologie IgM ;11;
+218;NU;HbA1c, hémoglobine glycosylée ;11;
+219;NU;HBs, antigène ;11;
+220;NU;HCV anticorps (hépatite C ) ;11;
+221;NU;Hémoculture ;11;
+222;NU;HGPO (75g de glucose) 2H ;11;
+223;NU;HIV Combo (Ag et Ac) ;11;
+224;NU;Hormone Anti-Mullerienne ;11;
+225;NU;IgE totales ;11;
+226;NU;INR ;11;
+227;NU;Ionogramme sanguin ;11;
+228;NU;Ionogramme urinaire;11;
+229;NU;LDH;11;
+230;NU;LH ( hormone lutéinisante humaine, lutropine ) ;11;
+231;NU;Lipasémie ;11;
+232;NU;Magnésémie;11;
+233;NU;Magnésurie ;11;
+234;NU;Microalbuminurie ;11;
+235;NU;Microalbuminurie urines 24h;11;
+236;NU;MINI test;11;
+237;NU;Numération Formule Sanguine (FNS) ;11;
+238;NU;O SULLIVAN test (50g glucose) ;11;
+239;NU;Parasitologie des selles ;11;
+240;NU;Parasitologie des Urines;11;
+241;NU;;11;
+242;NU;Phosphaturie;11;
+243;NU;Phosphorémie ;11;
+244;NU;Sédiment urinaire;11;
+245;NU;Sérodiagnostic de WIDAL et FELIX ;11;
+246;NU;Résistance globulaire ;11;
+247;NU;T3 libre ( triiodothyronine libre);11;
+248;NU;T4 libre ( thyroxine libre );11;
+249;NU;Taux de réticulocytes;11;
+250;NU;TCK ( temps de céphaline-kaolin ) ;11;
+251;NU;Testostéronémie ;11;
+252;NU;Tg (Thyroglobulinémie) ;11;
+253;NU;TIBC ( total iron binding capacity );11;
+254;NU;Toxoplasmose, sérologie IgG ;11;
+255;NU;Toxoplasmose, sérologie IgM ;11;
+256;NU;TP ( taux de prothrombine ) ;11;
+257;NU;Transaminases ASAT ALAT;11;
+258;NU;Transférrine ;11;
+259;NU;Troponine I ;11;
+260;NU;TSHus 3ème GEN ;11;
+261;NU;Uraturie (acide urique urinaire) ;11;
+262;NU;Urée urinaire ;11;
+263;NU;Urémie ;11;
+264;NU;Uricémie (Acide Urique) AU;11;
+265;NU;Vitamine B12 ( Cobalamine ) ;11;
+266;NU;VS, vitesse de sédimentation ;11;
+267;NU;Progestéronémie;11;
+268;NU;Prolactinémie ;11;
+269;NU;Proteines totales ;11;
+270;NU;Proteinurie des 24h;11;
+271;NU;PSA libre;11;
+272;NU;PSA total;11;
+273;NU;PTH intacte ( hormone parathyroÃ¯dienne );11;
+274;NU;RAI: Recherche d'Agglutinines Irrégulières ( panel );11;
+275;NU;Recherche de Pytiriasis Versicolor;11;
+276;NU;Recherche d'Hélicobacter pylori dans les selles ;11;
+277;NU;Recherche du corps de Leishmania ;11;
+278;NU;Résistance globulaire;11;
+279;NU;RF, Facteurs Rhumatoides ;11;
+280;NU;Waaler Rose;11;
+281;NU;Rubéole, sérologie IgG ;11;
+282;NU;Rubéole, sérologie IgM ;11;
+283;NU;Sang dans les selles, recherche;11;
+284;NU;Sang dans les selles, recherche;11;
+285;NU;Scotch test ;11;
+286;NU;17 OH progestérone ;11;
+288;NU;ACTH ;11;
+289;NU;Anticorps antiphospholipides SAPL ;11;
+290;NU;AC anticellules parietales ;11;
+291;NU;ANCA;11;
+292;NU;AC antiendomysim ;11;
+293;NU;AC anti- facteur intrinseque ;11;
+294;NU;AC antigliadine ;11;
+295;NU;AC antimuscle lisse (anti actine F) ;11;
+296;NU;AC anti muscle squelettiques ;11;
+298;NU;AC anti â€“ peau ;11;
+299;NU;Anti CCP3 ;11;
+300;NU;AC anti tissu non spesifique dâ€™orange ;11;
+301;NU; AC anti -transglutaminase IgA;11;
+302;NU;AC anti -transglutaminase IgG ;11;
+303;NU; BNP Brain natriuretic peptide ;11;
+304;NU;Chlamydia trachomatis IgM ;11;
+305;NU;Chlamydia trachomatis IgA ;11;
+306;NU;Chlamydia trachomatis IgG ;11;
+307;NU;Complément C 1 inhibiteur ;11;
+308;NU;Complement C 3 ;11;
+309;NU;Complement C 4 ;11;
+310;NU;DELTA 4 androstenedione ;11;
+311;NU;DHEA-s;11;
+312;NU;Serologie EBV EBNA IgG (Epstein Barr Virus) ;11;
+313;NU;Serologie EBV VCA IgG ;11;
+314;NU;Serologie EBV VCA IgMÂµ;11;
+315;NU;G6PD;11;
+316;NU;HERPES SIMPLEX virus HSV IgG ;11;
+317;NU;HERPES SIMPLEX virus HSV IgM ;11;
+318;NU;HOMOCYSTEINE;11;
+319;NU;IMMUNOTYPAGE;11;
+320;NU;IGF1;11;
+321;NU;IgA;11;
+322;NU;IgE;11;
+323;NU;IgM;11;
+324;NU;IgG;11;
+325;NU;EXPLOITATION DE LA MALADIE COELIAQUE ;11;
+326;NU;MYCOPLASME urogenitaus sérologie ;11;
+327;NU;PANEL ALIMENTAIRE;11;
+328;NU;PANEL RESPIRATOIRE ;11;
+329;NU;PANAEL MIXT PEDIATRIQUE ;11;
+330;NU;TRANSFERRINE ;11;
+331;NU;pédiatrie;12;
+332;NU;généraliste;12;
+333;NU;consultation d'anesthesie avec ECG ;12;
+334;GAST01;Consultation spécialise;13;ES
+335;GAST02;Consultation spécialise ;13;ES
+336;GAST03;Fibro simple;13;ES
+337;GAST04;Recto simple;13;ES
+338;GAST05;Coloscopie seule a vif;13;ES
+339;GAST06;Examen proct    rectoscopie;13;ES
+340;GAST07;Fibro +Biopsie a vif;13;ES
+341;GAST08;Fibro sans sédation ( extraction corps étranger ) ;13;ES
+342;GAST09;Fibro sans sédation ( extraction corps étranger ) ;13;ES
+343;GAST10;Coloscopie+ biopsie ;13;ES
+344;GAST11;Fibro/récto avec sédation ( sans biopsie) ;13;ES
+345;GAST12;Fibro/recto avec sédation + biopsie ;13;ES
+346;GAST13;Fibro avec sédation+ dilatation ;13;ES
+347;GAST14;Fibro avec sédation avec geste de résection ;13;ES
+348;GAST15;Fibro avec sédation avec geste de résection ;13;ES
+349;GAST16;Fibro avec sédation ( extraction corps étranger ) ;13;ES
+350;GAST17;Fibro avec sédation ( extraction corps étranger ) ;13;ES
+351;GAST18;Coloscopie avec sédation ;13;ES
+352;GAST19;Résection (de 1 a 3 polypes) ;13;ES
+353;GAST20;Résection (4 a 6 polyps) ;13;ES
+354;GAST21;Résection (7 a 12 polypes) ;13;ES
+355;GAST22;Fibroscopie+ coloscopie;13;ES
+356;GAST23;Biopsie digestive (fibroscopie / coloscopie / rectosygmoido);13;ES
+357;GAST24;Fibroscan;13;ES
+358;GAST25;Gastrostomie sans sédation ;13;ES
+359;GAST26;Gastrostomie avec sédation;13;ES
+360;DELT;;13;ES
+361;GAST27;Ballonnet intragastriq;13;ES
+362;NU;créatinine;11;
+363;NU;cholestérol total;11;
+364;NU;HDL;11;
+365;NU;FNS;18;
+366;NU;;11;
+367;NU;Groupage sanguin avec carte de groupage;11;
+368;NU;phosphatase alcaline PA;11;
+369;NU;;11;
+370;NU;HCV qualitatif;11;
+371;NU;HBs qualitatif;11;
+372;NU;HIV qualitatif;11;
+373;NU;BW syphilis qualitatif;11;
 374;CT27;Urino-scanner;5;CT
-419;MR34;IRM Mammaire ;7;MR
+375;NU;Prélèvement de sang;11;
+376;NU;Prélèvement d'urine;11;
+377;GAST29;1 clip;13;ES
+378;GAST30;2 clips;13;ES
+379;GAST31;3 clips;13;ES
+380;GAST32;4 clips;13;ES
+381;GAST33;Fibro avec 5 clip;13;ES
+382;GAST34;Fibro avec 6 clip;13;ES
+383;GAST35;Fibro avec 7 clip;13;ES
+384;GAST36;Fibro avec sédation (Ligature des varice oesophagiennes) LVO (AVEC KIT);13;ES
+385;GAST37;Fibro avec sédation (Ligature des varice oesophagiennes) LVO (SANS KIT);13;ES
+386;NU;Consultation dâ€™anesthésie ;14;
+387;NU;Consultation médicale G ;14;
+388;NU;Perfusion prodafalgan /paracetamol ;14;
+389;NU;Injection corticoÃ¯de  HHC ;14;
+390;NU;Injection SOLUMEDROL ;14;
+391;NU;Injection azantac;14;
+392;NU;Injection omeprazol/moprale;14;
+393;NU;Injection primperan ;14;
+394;NU;Injection VOLTARENE ;14;
+395;NU;Stabilisation tension artérielle en urgence ;14;
+396;NU;Séance dâ€™aérosol ;14;
+397;NU;Mise en place sonde naso gastrique ;14;
+398;NU;Mise en place ou changement poche a urinaire;14;
+399;NU;Hyperhydratation produit de contraste ;14;
+400;NU;Ponction dâ€™ascite ;14;
+401;NU;1 Point de suture ;14;
+402;NU;Kinésithérapie respiratoire + aspiration ;14;
+403;NU;Changement de pansement ;14;
+404;NU;Changement de pansement Ã  domicile ;14;
+405;NU;oxygenotherapie  o2 / 10minutes;14;
+406;NU;Surveillance hypoglycemie  selon nbr de glucosé ;14;
+407;NU;Insulinothérapie ;14;
+408;NU;magnésium MG;14;
+409;NU;Prélèvement Ã  domicile ;14;
+410;NU;Injection loxen;14;
+411;NU;Injection intra veineuse ;14;
+412;NU;Changement de collecteur dâ€™urine ;14;
+413;NU;Coctel (vitc + 2amoxi + solu + perfa + glucosé) ;14;
+414;NU;Antibiotiques :   -amoxicilline ;14;
+415;NU;Antibiotiques :   -Cefazoline ;14;
+416;NU;Antibiotiques :  -Claforan ;14;
+417;NU;Antibiotiques :  -Flagyl ;14;
+418;NU;Dacryoscanner;10;
+419;MR34;IRM Mammaire;7;MR
 420;MR35;IRM Dorsolombaire;7;MR
-428;MR36;IRM Bilan d'extension  ;7;MR
-429;XA02;sclerose quiste rénale;9;XA
+421;NU;vit C ;14;
+422;NU;Gastro;12;
+423;NU;spécialisé;12;
+424;NU;ECG seul ;12;
+425;NU;Anésthesie;12;
+428;MR36;IRM Bilan d'extension;7;MR
+429;XA02;Sclerose quiste rénale;9;XA
+430;GAST38;Echoendoscopie basse;13;ES
+431;NU;Valium;14;
 432;CARDIO01;Echographie cardiaque ;15;US
-435;CARDIO04;Echo + consultation ;15;US
+433;CARDIO03;Consultation cardio + ECG;15;ECG
+434;CARDIO04;Consultation cardio + ECG;15;ECG
+435;CARDIO02;Echo + consultation ;15;US
+435;CARDIO05;Epreuve d'effort;15;ECG
+435;CARDIO06;Holter ECG 48h;15;ECG
+435;CARDIO07;Holter ECG 24h;15;ECG
+435;CARDIO08;Holter tensionnel MAPA;15;ECG
+440;GAST39;RectosigmoÃ¯doscopie;13;ES
+441;NU;Serologie coeliaque;11;
+442;GAST40;Echo endo diagnostic ;13;ES
+443;GAST41;Echo endo thérapeutique + Biopsie;13;ES
 444;CT28;Scanner cervico-thoraco-abdomino-pelvien ;5;CT
 445;CT29;Dentascan;5;CT
+446;CT62;Denstascan;5;CT
+447;NU;Spasfon;14;
+448;NU;Spasfon;14;
+449;NU;ECA;11;
+450;NU;salé 500cc;14;
+451;NU;salé 750cc;14;
+452;NU;glucosé 500cc;14;
 453;ECHO10;Echographie Cytoponction;3;US
+454;NU;Bilan connectivité ( anti DNA natif + anti SSA SSB ) ;11;
+455;NU;Anti CCP;11;
 456;MR37;IRM sédation;7;MR
+457;DELT;;7;MR
+458;NU;sédation;5;CT
+459;NU;lavage d'oreille;14;
+460;DELT;test;1;CR
+461;NU;biopsie echo endo ;10;
+462;NU;dexamethasone;14;
+463;NU;azantac;14;
+464;GAST42;Fibroscopie associée a une échoendo;13;ES
+465;GAST43;Fecalome extraction;13;ES
+466;NU;calcium ca++ perfusion;14;
+467;NU;VITAMINE B9;11;
+468;NU;VITAMINE B9;11;
+469;NU;taux d'haptoglobine   ;11;
 470;MG02;Microbiopsie mammaire , biopsie mammaire;9;MG
+471;NU;enzyme de conversion;11;
+472;NU;Bilan hepatique;11;
+473;NU;Straping;14;
+474;NU;Serologie EBV   E.B.V;11;
+475;NU;glucagon;14;
 476;XA03;Chambre Implantable;9;XA
 477;XA04;Chambre Implantable (chambre fournie par le malade);9;XA
+478;NU;produit de contraste pour chambre implantable;9;
+479;NU;pneumologie, Allergologie;12;
+480;NU;Médecine de sommeil;12;
+481;NU;EFR Exploration Fonctionnelle Respiratoire;12;
+482;NU;Tests Cutanées Allergologues;12;
+483;NU;Polygraphie du sommeil / Apnées du sommeil;12;
+484;NU;Lipides Totaux LT;11;
+485;NU;Urée Sanguin US  urée /creat;11;
+486;NU;Bilirubine Totale  BT;11;
 487;ECHO11;Echographie Transfontannelle  ETF;3;US
-489;RAD05;Radio fistulographie;2;CR
+488;GAST44;Coloscopie Dr Bouchemel;13;ES
+489;RAD05;Radio Fistulographie;1;CR
+490;NU;immunohistochimie  IHC;10;
+491;NU;Elastoplaste;14;
+492;NU;Frottis cervico-utérin   FCV Soustraitance;10;
+493;NU;Lopril cp;14;
+494;NU;copie echographie;3;US
+495;NU;copie livre IRM;7;MR
+496;NU;copie CD;7;MR
+497;NU;copie CD;5;CT
+498;NU;copie livre TDM;5;CT
+499;NU;poche a urine;14;
+500;NU;sonde a urine;14;
 501;MR38;COMPLEMENT perfusion IRM;7;MR
-503;MR39;IRM Cerebral  Spectro ;7;MR
-504;MR40;IRM Cérébro-cervicale Spectro ;7;MR
-514;ECHO12;Echographie cytoponction spinal;3;US
-525;XA05;angiographie cerebrale (diagnostic);9;XA
-526;XA06;Fil Harpon ;9;XA
-457;;;7;MR
-495;;copie livre IRM;7;MR
-496;;copie CD;7;MR
-527;XA07;e.c.b  ECB  Poncti evacuatrice;9;XA
-533;XA08;ablation de drain billiaire;9;XA
+502;NU;Ablation de fil;14;
+503;MR39;IRM Cerebral  Spectro;7;MR
+504;MR40;IRM Cérébro-cervicale Spectro;7;MR
+505;GAST45;Fibro sous sedation FS;13;ES
+506;GAST46;Plasma Argon Rectite Radique;13;ES
+507;GAST47;Plasma Argon ;13;ES
+508;NU;prise en charge d'une convulsion ;14;
+509;NU;Anti corps Anti Mitochondrie;11;
+510;NU;Proteine C;11;
+511;NU;Proteine S;11;
+512;NU;Facteur 2;11;
+513;NU;Facteur leiden    (facteur 5);11;
+514;ECHO12;Echographie Cytoponction spinal;3;US
+515;NU;circoncision a vif;9;
+516;NU;circoncision sous sedation;9;
+517;NU;2 Points de suture ;14;
+518;NU;3 Points de suture ;14;
+519;NU;4 Points de suture ;14;
+520;NU;5 Points de suture ;14;
+521;NU;6 Points de suture ;14;
+522;NU;H observation longue;14;
+523;GAST48;Endoscopie bronchique a vif;13;ES
+524;GAST49;Endoscopie bronchique sous sedation;13;ES
+525;XA05;Angiographie cerebrale (diagnostic);9;XA
+526;XA06;Fil Harpon;9;XA
+527;XA07;E.c.b  ECB  Poncti evacuatrice;9;XA
+528;NU;ATROPINE;14;
+529;NU;Adrenaline;14;
+530;NU;tumerectomie;10;
+531;NU;antalgique;14;
+532;NU;prise en charge antalgique des hémoraides;14;
+533;XA08;Ablation de drain billiaire;9;XA
 534;MR41;IRM CEREBRALE MULTIMODAL;7;MR
+535;NU;Lavement evacuateur;14;
+536;NU;K+ Potassium;14;
+537;NU;Albumine 50ml;14;
+538;NU;ponction pleurale;14;
+539;NU;sedation;9;
+540;GAST50;Echoendoscopie avec biopsie (reprise sans aiguille);13;ES
 541;MR42;Complement IRM Spectro;7;MR
-545;MR43;IRM foetale;7;MR
-548;CT44;coroscanner + score calcique;5;CT
-549;MR51;IRM Cérébrale et TSAO;7;MR
-ND;PAN01;Panoramique 01 incidence;1;PX
-ND;PAN02;Panoramique 02 incidences;1;PX
-ND;PAN03;Panoramique 03 incidences;1;PX
-ND;PAN04;Panoramique 04 incidences;1;PX
-ND;MG01;Mammographie ;ND;MG
-ND;DMO01;DMO;1;OT
-ND;CT45;Scanner bras (humerus);5;CT
-ND;CT46;Scanner coude;5;CT
-ND;CT47;Scanner avant-bras;5;CT
-ND;CT48;Scanner poignet;5;CT
-ND;CT49;Scanner main;5;CT
-ND;CT50;Scanner sacro-iliaque;5;CT
-ND;CT51;Scanner hanches (coxo-femoral);5;CT
-ND;CT52;Scanner bassin;5;CT
-ND;CT53;Scanner femur (cuisse);5;CT
-ND;CT54;Scanner jambe (tibia);5;CT
-ND;CT55;Scanner cheville;5;CT
-111;;Biopsie gastrique, duodénale, colique, polype gastrique ( 1 flacon ) ;10;
-112;;Biopsie gastrique, duodénale, colique ( 2 flacon ) ;10;
-113;;Biopsie gastrique, duodénale, colique ( 3 flacon ) ;10;
-114;;Biopsie gastrique, duodénale, colique ( 3 flacon ) ;10;
-115;;Biopsie gastrique, duodénale, colique ( 4 flacon ) ;10;
-116;;Biopsie gastrique, duodénale, colique ( 5 flacon);10;
-117;;Biopsie glandes salivaire;10;
-118;;Biopsie cavum;10;
-119;;Biopsie hépatique;10;
-120;;"Biopsie cutanée simple (verrue- naevus -condylome -
-kyste)";10;
-121;;Biopsie exérÃ¨se orientée par un fil repÃ¨re;10;
-122;;Biopsie mammaire;10;
-123;;Biopsie bronchique, pleurale, pulmonaire;10;
-124;;Biopsie prostatique;10;
-125;;Copeaux de résection tm de vessie Ou copeaux de résection prostatiques;10;
-126;;Adénome de prostate;10;
-127;;Appendice ou vésicule biliaire (cholicystectomie);10;
-128;;"Produit dâ€™avortement 4500
-curetage biopsique de ";10;
-129;;curetage biopsique de lâ€™endocol;10;
-130;;Placenta;10;
-131;;Biopsie du col / polype du col ;10;
-132;;Angiome, amygdale, glande de Bartholin, végétations, ganglion, hydrocÃ¨le, varicocÃ¨le fistule anale, fistule pilonidale, hémorroÃ¯des, polype nasal;10;
-133;;"ThyroÃ¯dectomie totale
-";10;
-134;;Lobo-isthmectomie;10;
-135;;"Sein, colon, estomac, rectum, poumon, rein, vessie
-(résection dâ€™organe)";10;
-136;;Cystoprostatectomie ;10;
-137;;Hystérectomie totale avec annexectomie ;10;
-138;;Hystérectomie totale ou sub tot interannexielle;10;
-139;;Conisation;10;
-140;;Kyste ovarien fibrome utérin, adénofibrome du sein;10;
-141;;Annexectomie, grossesse extra utérine;10;
-142;;Frottis cervico-utérin  FCV;10;
-143;;Lames de cytoponction 1 Ã  4 lames;10;
-144;;Lames de cytoponction 5 Ã  8 lames et plus;10;
-418;;Dacryoscanner;10;
-461;;biopsie echo endo ;10;
-490;;immunohistochimie  IHC;10;
-492;;Frottis cervico-utérin   FCV Soustraitance;10;
-530;;tumerectomie;10;
-145;;25-Hydroxy-Vitamine D   vit D3;11;
-146;;Ac Anti-Tg ( anticorps anti-thyroglobuline ) ;11;
-147;;Ac Anti-Tg ( anticorps anti-thyroglobuline ) ;11;
-148;;Ac Anti-TPO ( anticorps anti-thyroperoxydase ) ;11;
-149;;ACE ( antigÃ¨ne carcino-embryonnaire );11;
-150;;AFP ( alpha-foetoprotéine );11;
-151;;Albuminémie ;11;
-152;;Amylasémie ;11;
-153;;Amylasurie ;11;
-154;;ASLO ( Anti-StreptoLysines O );11;
-155;;B.L : Cholestérol-HDL ( high density lipoprotein ) ;11;
-156;;B.L : Cholestérol-LDL ( low density lipoprotein );11;
-157;;B.L : Cholestérol-total ;11;
-158;;B.L :Triglycérides  TG;11;
-159;;BÃªta-HCG (Hormone Chorionique Gonadotrope);11;
-160;;Bilharziose;11;
-161;;Bilirubinémie  Bil Direct et indirect;11;
-162;;BK ( bacille de Koch ) : bacilloscopie ;11;
-163;;BK ( bacille de Koch ) : culture;11;
-164;;Brucellose, sérologie;11;
-165;;BW ( Syphilis ) quantitatif;11;
-166;;CA 125 ;11;
-167;;CA 15-3;11;
-168;;CA 19-9 ;11;
-169;;Calcémie  Calcium  ca++;11;
-170;;Calciurie ;11;
-171;;Candida divers (Culture) ;11;
-172;;Candida selles (Culture) ;11;
-173;;Chimie des urines ;11;
-174;;CK-MB ( créatine phospho-kinase MB ) ;11;
-175;;Clairance de la créatinine;11;
-176;;CMV ( Cytomégalovirus ), sérologie IgG ;11;
-177;;CMV ( Cytomégalovirus ), sérologie IgM ;11;
-178;;Compte d'Addis-Hamburger ;11;
-179;;Coombs direct, TDA ( test direct Ã  l'antiglobuline ) ;11;
-180;;Coproculture ;11;
-181;;Copro-parasitologie ;11;
-182;;Cortisolémie;11;
-183;;Cortisolurie ;11;
-184;;CPK ( créatine phospho-kinase ) ;11;
-185;;Créatininémie  créea/urée;11;
-186;;Créatininurie ;11;
-187;;CRP, Protéine C-Réactive;11;
-188;;D-dimÃ¨res;11;
-189;;Densité Urinaire;11;
-190;;Dépakinémie, acide valproÃ¯que;11;
-191;;E.C.B ECB du liquide synovial ;11;
-192;;E.C.B   ECB de pus;11;
-193;;E.C.B.U  ECBU des urines ;11;
-195;;E.C.B  ECB  du prélÃ¨vement vaginal ;11;
-196;;ElectrophorÃ¨se de l'hémoglobine;11;
-197;;ElectrophorÃ¨se des proteines;11;
-198;;Eosinophilie lacrymale;11;
-199;;Eosinophilie nasale ;11;
-200;;Esinophilie pharyngée ;11;
-201;;Estradiol ( E2 );11;
-202;;Examen chimique et E.C.B  ECB de liquide d'ascite ;11;
-203;;Examen chimique et E.C.B  ECB de liquide pleural ;11;
-204;;Examen Mycologique ;11;
-205;;Fer sérique ;11;
-206;;Férritinémie    feritinemie;11;
-207;;Fibrinogéne ;11;
-208;;Frottis sanguin ;11;
-209;;FSH ( hormone folliculostimulante humaine );11;
-210;;Gamma GT ;11;
-211;;Glucosurie des 24 h ;11;
-212;;Glycémie ;11;
-213;;Glycémie post-prandiale (GPP) ;11;
-214;;Goutte Epaisse ;11;
-215;;Groupage Phénotypé ;11;
-216;;Groupage sanguin  ;11;
-217;;HAV, sérologie IgM ;11;
-218;;HbA1c, hémoglobine glycosylée ;11;
-219;;HBs, antigÃ¨ne ;11;
-220;;HCV anticorps (hépatite C ) ;11;
-221;;Hémoculture ;11;
-222;;HGPO (75g de glucose) 2H ;11;
-223;;HIV Combo (Ag et Ac) ;11;
-224;;Hormone Anti-Mullerienne ;11;
-225;;IgE totales ;11;
-226;;INR ;11;
-227;;Ionogramme sanguin ;11;
-228;;Ionogramme urinaire;11;
-229;;LDH;11;
-230;;LH ( hormone lutéinisante humaine, lutropine ) ;11;
-231;;Lipasémie ;11;
-232;;Magnésémie;11;
-233;;Magnésurie ;11;
-234;;Microalbuminurie ;11;
-235;;Microalbuminurie urines 24h;11;
-236;;MINI test;11;
-237;;Numération Formule Sanguine (FNS) ;11;
-238;;O SULLIVAN test (50g glucose) ;11;
-239;;Parasitologie des selles ;11;
-240;;Parasitologie des Urines;11;
-241;;;11;
-242;;Phosphaturie;11;
-243;;Phosphorémie ;11;
-244;;Sédiment urinaire;11;
-245;;Sérodiagnostic de WIDAL et FELIX ;11;
-246;;Résistance globulaire ;11;
-247;;T3 libre ( triiodothyronine libre);11;
-248;;T4 libre ( thyroxine libre );11;
-249;;Taux de réticulocytes;11;
-250;;TCK ( temps de céphaline-kaolin ) ;11;
-251;;Testostéronémie ;11;
-252;;Tg (Thyroglobulinémie) ;11;
-253;;TIBC ( total iron binding capacity );11;
-254;;Toxoplasmose, sérologie IgG ;11;
-255;;Toxoplasmose, sérologie IgM ;11;
-256;;TP ( taux de prothrombine ) ;11;
-257;;Transaminases ASAT ALAT;11;
-258;;Transférrine ;11;
-259;;Troponine I ;11;
-260;;TSHus 3Ã¨me GEN ;11;
-261;;Uraturie (acide urique urinaire) ;11;
-262;;Urée urinaire ;11;
-263;;Urémie ;11;
-264;;Uricémie (Acide Urique) AU;11;
-265;;Vitamine B12 ( Cobalamine ) ;11;
-266;;VS, vitesse de sédimentation ;11;
-267;;Progestéronémie;11;
-268;;Prolactinémie ;11;
-269;;Proteines totales ;11;
-270;;Proteinurie des 24h;11;
-271;;PSA libre;11;
-272;;PSA total;11;
-273;;PTH intacte ( hormone parathyroÃ¯dienne );11;
-274;;RAI: Recherche d'Agglutinines IrréguliÃ¨res ( panel );11;
-275;;Recherche de Pytiriasis Versicolor;11;
-276;;Recherche d'Hélicobacter pylori dans les selles ;11;
-277;;Recherche du corps de Leishmania ;11;
-278;;Résistance globulaire;11;
-279;;RF, Facteurs Rhumatoides ;11;
-280;;Waaler Rose;11;
-281;;Rubéole, sérologie IgG ;11;
-282;;Rubéole, sérologie IgM ;11;
-283;;Sang dans les selles, recherche;11;
-284;;Sang dans les selles, recherche;11;
-285;;Scotch test ;11;
-286;;17 OH progestérone ;11;
-288;;ACTH ;11;
-289;;Anticorps antiphospholipides SAPL ;11;
-290;;AC anticellules parietales ;11;
-291;;ANCA;11;
-292;;AC antiendomysim ;11;
-293;;AC anti- facteur intrinseque ;11;
-294;;AC antigliadine ;11;
-295;;AC antimuscle lisse (anti actine F) ;11;
-296;;AC anti muscle squelettiques ;11;
-298;;AC anti â€“ peau ;11;
-299;;Anti CCP3 ;11;
-300;;AC anti tissu non spesifique dâ€™orange ;11;
-301;; AC anti -transglutaminase IgA;11;
-302;;AC anti -transglutaminase IgG ;11;
-303;; BNP Brain natriuretic peptide ;11;
-304;;Chlamydia trachomatis IgM ;11;
-305;;Chlamydia trachomatis IgA ;11;
-306;;Chlamydia trachomatis IgG ;11;
-307;;Complément C 1 inhibiteur ;11;
-308;;Complement C 3 ;11;
-309;;Complement C 4 ;11;
-310;;DELTA 4 androstenedione ;11;
-311;;DHEA-s;11;
-312;;Serologie EBV EBNA IgG (Epstein Barr Virus) ;11;
-313;;Serologie EBV VCA IgG ;11;
-314;;Serologie EBV VCA IgMÂµ;11;
-315;;G6PD;11;
-316;;HERPES SIMPLEX virus HSV IgG ;11;
-317;;HERPES SIMPLEX virus HSV IgM ;11;
-318;;HOMOCYSTEINE;11;
-319;;IMMUNOTYPAGE;11;
-320;;IGF1;11;
-321;;IgA;11;
-322;;IgE;11;
-323;;IgM;11;
-324;;IgG;11;
-325;;EXPLOITATION DE LA MALADIE COELIAQUE ;11;
-326;;MYCOPLASME urogenitaus sérologie ;11;
-327;;PANEL ALIMENTAIRE;11;
-328;;PANEL RESPIRATOIRE ;11;
-329;;PANAEL MIXT PEDIATRIQUE ;11;
-330;;TRANSFERRINE ;11;
-362;;créatinine;11;
-363;;cholestérol total;11;
-364;;HDL;11;
-366;;;11;
-367;;Groupage sanguin avec carte de groupage;11;
-368;;phosphatase alcaline PA;11;
-369;;;11;
-370;;HCV qualitatif;11;
-371;;HBs qualitatif;11;
-372;;HIV qualitatif;11;
-373;;BW syphilis qualitatif;11;
-375;;PrélÃ¨vement de sang;11;
-376;;PrélÃ¨vement d'urine;11;
-441;;Serologie coeliaque;11;
-449;;ECA;11;
-454;;Bilan connectivité ( anti DNA natif + anti SSA SSB ) ;11;
-455;;Anti CCP;11;
-467;;VITAMINE B9;11;
-468;;VITAMINE B9;11;
-469;;taux d'haptoglobine   ;11;
-471;;enzyme de conversion;11;
-472;;Bilan hepatique;11;
-474;;Serologie EBV   E.B.V;11;
-484;;Lipides Totaux LT;11;
-485;;Urée Sanguin US  urée /creat;11;
-486;;Bilirubine Totale  BT;11;
-509;;Anti corps Anti Mitochondrie;11;
-510;;Proteine C;11;
-511;;Proteine S;11;
-512;;Facteur 2;11;
-513;;Facteur leiden    (facteur 5);11;
-331;;pédiatrie;12;
-332;;généraliste;12;
-333;;consultation d'anesthesie avec ECG ;12;
-422;;Gastro;12;
-423;;spécialisé;12;
-424;;ECG seul ;12;
-425;;Anésthesie;12;
-479;;pneumologie, Allergologie;12;
-480;;Médecine de sommeil;12;
-481;;EFR Exploration Fonctionnelle Respiratoire;12;
-482;;Tests Cutanées Allergologues;12;
-483;;Polygraphie du sommeil / Apnées du sommeil;12;
-334;GAST01;Consultation spécialise ;GASTRO;ES
-335;GAST02;Consultation spécialise ;GASTRO;ES
-336;GAST03;Fibro simple ;GASTRO;ES
-337;GAST04;Recto simple ;GASTRO;ES
-338;GAST05;Coloscopie seule a vif;GASTRO;ES
-339;GAST06;Examen proct    rectoscopie;GASTRO;ES
-340;GAST07;Fibro +Biopsie a vif ;GASTRO;ES
-341;GAST08;Fibro sans sédation ( extraction corps étranger ) ;GASTRO;ES
-342;GAST09;Fibro sans sédation ( extraction corps étranger ) ;GASTRO;ES
-343;GAST10;Coloscopie+ biopsie ;GASTRO;ES
-344;GAST11;Fibro/récto avec sédation ( sans biopsie) ;GASTRO;ES
-345;GAST12;Fibro/recto avec sédation + biopsie ;GASTRO;ES
-346;GAST13;Fibro avec sédation+ dilatation ;GASTRO;ES
-347;GAST14;Fibro avec sédation avec geste de résection ;GASTRO;ES
-348;GAST15;Fibro avec sédation avec geste de résection ;GASTRO;ES
-349;GAST16;Fibro avec sédation ( extraction corps étranger ) ;GASTRO;ES
-350;GAST17;Fibro avec sédation ( extraction corps étranger ) ;GASTRO;ES
-351;GAST18;Coloscopie avec sédation ;GASTRO;ES
-352;GAST19; résection (de 1 a 3 polypes) ;GASTRO;ES
-353;GAST20;résection (4 a 6 polyps) ;GASTRO;ES
-354;GAST21;résection (7 a 12 polypes) ;GASTRO;ES
-355;GAST22;Fibroscopie+ coloscopie;GASTRO;ES
-356;GAST23;biopsie digestive (fibroscopie / coloscopie / rectosygmoido);GASTRO;ES
-357;GAST24;Fibroscan;GASTRO;ES
-358;GAST25;Gastrostomie sans sédation ;GASTRO;ES
-359;GAST26;Gastrostomie avec sédation;GASTRO;ES
-360;GAST27;;GASTRO;ES
-361;GAST28;Ballonnet intragastriq;GASTRO;ES
-377;GAST29;1 clip;GASTRO;ES
-378;GAST30;2 clips;GASTRO;ES
-379;GAST31;3 clips;GASTRO;ES
-380;GAST32;4 clips;GASTRO;ES
-381;GAST33;Fibro avec 5 clip;GASTRO;ES
-382;GAST34;Fibro avec 6 clip;GASTRO;ES
-383;GAST35;Fibro avec 7 clip;GASTRO;ES
-384;GAST36;Fibro avec sédation (Ligature des varice oesophagiennes) LVO (AVEC KIT);GASTRO;ES
-385;GAST37;Fibro avec sédation (Ligature des varice oesophagiennes) LVO (SANS KIT);GASTRO;ES
-430;GAST38;Echoendoscopie basse;GASTRO;ES
-440;GAST39;RectosigmoÃ¯doscopie;GASTRO;ES
-442;GAST40;Echo endo diagnostic ;GASTRO;ES
-443;GAST41;Echo endo thérapeutique + Biopsie;GASTRO;ES
-464;GAST42;fibroscopie associée a une échoendo;GASTRO;ES
-465;GAST43;fecalome extraction;GASTRO;ES
-488;GAST44;coloscopie Dr Bouchemel;GASTRO;ES
-505;GAST45;fibro sous sedation FS;GASTRO;ES
-506;GAST46;Plasma Argon Rectite Radique;GASTRO;ES
-507;GAST47;Plasma Argon ;GASTRO;ES
-523;GAST48;endoscopie bronchique a vif;GASTRO;ES
-524;GAST49;endoscopie bronchique sous sedation;GASTRO;ES
-540;GAST50;echoendoscopie avec biopsie (reprise sans aiguille);GASTRO;ES
-550;GAST51;Sphyncterotomie , CPRE ;GASTRO;ES
-551;GAST52;Sphyncterotomie , CPRE  complement STENT;GASTRO;ES
-552;GAST53;Sphyncterotomie , CPRE  complement Précoupe;GASTRO;ES
-386;;Consultation dâ€™anesthésie ;14;
-387;;Consultation médicale G ;14;
-388;;Perfusion prodafalgan /paracetamol ;14;
-389;;Injection corticoÃ¯de  HHC ;14;
-390;;Injection SOLUMEDROL ;14;
-391;;Injection azantac;14;
-392;;Injection omeprazol/moprale;14;
-393;;Injection primperan ;14;
-394;;Injection VOLTARENE ;14;
-395;;Stabilisation tension artérielle en urgence ;14;
-396;;Séance dâ€™aérosol ;14;
-397;;Mise en place sonde naso gastrique ;14;
-398;;Mise en place ou changement poche a urinaire;14;
-399;;Hyperhydratation produit de contraste ;14;
-400;;Ponction dâ€™ascite ;14;
-401;;1 Point de suture ;14;
-402;;Kinésithérapie respiratoire + aspiration ;14;
-403;;Changement de pansement ;14;
-404;;Changement de pansement Ã  domicile ;14;
-405;;oxygenotherapie  o2 / 10minutes;14;
-406;;Surveillance hypoglycemie  selon nbr de glucosé ;14;
-407;;Insulinothérapie ;14;
-408;;magnésium MG;14;
-409;;PrélÃ¨vement Ã  domicile ;14;
-410;;Injection loxen;14;
-411;;Injection intra veineuse ;14;
-412;;Changement de collecteur dâ€™urine ;14;
-413;;Coctel (vitc + 2amoxi + solu + perfa + glucosé) ;14;
-414;;Antibiotiques :   -amoxicilline ;14;
-415;;Antibiotiques :   -Cefazoline ;14;
-416;;Antibiotiques :  -Claforan ;14;
-417;;Antibiotiques :  -Flagyl ;14;
-421;;vit C ;14;
-431;;Valium;14;
-447;;Spasfon;14;
-448;;Spasfon;14;
-450;;salé 500cc;14;
-451;;salé 750cc;14;
-452;;glucosé 500cc;14;
-459;;lavage d'oreille;14;
-462;;dexamethasone;14;
-463;;azantac;14;
-466;;calcium ca++ perfusion;14;
-473;;Straping;14;
-475;;glucagon;14;
-491;;Elastoplaste;14;
-493;;Lopril cp;14;
-499;;poche a urine;14;
-500;;sonde a urine;14;
-502;;Ablation de fil;14;
-508;;prise en charge d'une convulsion ;14;
-517;;2 Points de suture ;14;
-518;;3 Points de suture ;14;
-519;;4 Points de suture ;14;
-520;;5 Points de suture ;14;
-521;;6 Points de suture ;14;
-522;;H observation longue;14;
-528;;ATROPINE;14;
-529;;Adrenaline;14;
-531;;antalgique;14;
-532;;prise en charge antalgique des hémoraides;14;
-535;;Lavement evacuateur;14;
-536;;K+ Potassium;14;
-537;;Albumine 50ml;14;
-538;;ponction pleurale;14;
-542;;bicarbonate;14;
-543;;Anesthesie local;14;
-544;;Extraction Corps Etranger (plaie cutanée);14;
-546;;acupan ;14;
-ND;CT56;Scanner pied;5;CT
-433;;consultation cardio + ECG;CARDIO;US
-434;;consultation cardio + ECG;CARDIO;US
-ND;CT57;Scanner avant-pied;5;CT
-436;;Epreuve d'effort;CARDIO;
-437;;Holter ECG 48h;CARDIO;
-438;;Holter ECG 24h;CARDIO;
-439;;Holter tensionnel MAPA;CARDIO;
-547;;Brévibloc;CARDIO;
-365;;FNS;18;
-;;;;
-;;;;
-;;Nouveau protocole ;;
-;;Modification du titre ;;
+542;NU;bicarbonate;14;
+543;NU;Anesthesie local;14;
+544;NU;Extraction Corps Etranger (plaie cutanée);14;
+545;MR43;IRM Foetale;7;MR
+546;NU;acupan ;14;
+547;CARDIO09;Brévibloc;15;ECG
+548;CT44;Coroscanner + score calcique;6;CT
+549;MR51;IRM Cérébrale et TSAO;8;MR
+550;GAST51;Sphyncterotomie , CPRE ;13;ES
+551;GAST52;Sphyncterotomie , CPRE  complement STENT;13;ES
+552;GAST53;Sphyncterotomie , CPRE  complement Précoupe;13;ES
+553;DELT;;9;
+554;NU;Tamgesic;14;
+555;NU;lasylixe , Razolix , lasilyx , furosémide 20mg;14;
+556;NU;Coefficient de saturation (fer serique , TIBC);11;
+557;NU;Anti corps AC anti muscle lisse ;11;
+558;NU;Anti corps AC anti LKM1 , anti SLA;11;
+559;MR52;IRM Prostatique;7;MR
+560;GAST54;Echoendoscopie Anale;13;ES
+561;NU;HAV , HVA , serologie Hepatite virale A;11;
+562;GAST55;Latéroscopie ;13;ES
+563;NU;Biopsie Osseuse;10;
+564;XA11;Drainage de collection;9;XA
+565;NU;prise en charge HTA ;14;
+566;NU;Acte 1;14;
+567;NU;Acte 2;14;
+568;NU;Acte 3;14;
+569;NU;Acte 4;14;
+570;NU;O2  Oxygenotherapie 30 minutes;14;
+571;NU;O2  Oxygenotherapie 1 heures;14;
+572;XA12;Complément Drainage (interne externe);9;XA
+573;XA13;Complément Drainage (interne externe)  2;9;XA
+574;XA14;Abces scrotale;9;XA
+575;NU;Cupirie;11;
+576;NU;Cupirie;11;
+577;NU;Cupirie;11;
+578;NU;Cupirie;11;
+579;NU;Cupirie;11;
+580;NU;Cereluoplasmine;11;
+581;NU;Cereluoplasmine;11;
+582;NU;Hepatologie;12;
+583;NU;TSI;11;
+584;NU;TSI;11;
+585;GAST56;Prothese oesophagienne (pose;13;ES
+586;CT59;Scanner Double energie;5;CT
+587;CT60;Scanner Complement Double energie;5;CT
+588;MR53;Angio IRM Cerebro - Cervicale;8;MR
+589;NU;Sédation seule  SS;13;
+590;DMO01;DMO;1;DMO
+591;MG01;Mammographie seule;1;MG
+592;CT61;Scanner du rachis total avec fenetre pulmonaire;5;CT
+593;XA15;Angiographie cerebrale (diagnostic)   enfants ;9;XA
+594;MG03;Mammographie + échographie mammaire;1;MG
+595;ECHO20;Echographie FAV Fistule Artério-Veineuse;3;US
+596;NU;augmentin;14;
+TO ADD;CT45;Scanner bras (humerus);6;CT
+TO ADD;CT46;Scanner coude;6;CT
+TO ADD;CT47;Scanner avant-bras;6;CT
+TO ADD;CT48;Scanner poignet;6;CT
+TO ADD;CT49;Scanner main;6;CT
+TO ADD;CT50;Scanner sacro-iliaque;6;CT
+TO ADD;CT51;Scanner hanches (coxo-femoral);6;CT
+TO ADD;CT52;Scanner bassin;6;CT
+TO ADD;CT53;Scanner femur (cuisse);6;CT
+TO ADD;CT54;Scanner jambe (tibia);6;CT
+TO ADD;CT55;Scanner cheville;6;CT
+TO ADD;CT56;Scanner pied;6;CT
+TO ADD;CT57;Scanner avant-pied;6;CT
+TO ADD;PANO01;Panoramique 01 incidence;1;PX
+TO ADD;PANO02;Panoramique 02 incidences;1;PX
+TO ADD;PANO03;Panoramique 03 incidences;1;PX
+TO ADD;PANO04;Panoramique 04 incidences;1;PX

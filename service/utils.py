@@ -157,6 +157,6 @@ if __name__ == "__main__":
     import conf
     print(conf.STATIC_TYPE_INTERVENTION)
     [print(x) for x in readXmlFile(conf.STATIC_TYPE_INTERVENTION)]
-    print("\n\n\n")
+    print("newline\nnewline\nnewline\nnewline")
     print(conf.STATIC_MEDECIN)
     [print(x) for x in readXmlFile(conf.STATIC_MEDECIN)]

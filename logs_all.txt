@@ -1,1 +1,6 @@
-w
+wUtils - readXmlFile - INFO - 36 - 2019-07-23 16:44:35,123 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - readXmlFile - INFO - 36 - 2019-07-23 16:44:36,334 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
+Utils - readXmlFile - INFO - 36 - 2019-07-23 16:44:36,334 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
+Utils - readXmlFile - INFO - 36 - 2019-07-23 16:45:22,574 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/types_intervention.csv
+Utils - readXmlFile - INFO - 36 - 2019-07-23 16:45:23,310 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
+Utils - readXmlFile - INFO - 36 - 2019-07-23 16:45:23,310 - [+] Successfully loaded F:\IFS\nouraures_connector/service/data/medecins.csv
