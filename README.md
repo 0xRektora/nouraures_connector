@@ -1,4 +1,4 @@
-Project creation
+NourAures connector is a intersystems connector between Evolucare Imaging ecosystem and clinic NourAures ERP.
 
 # Installation
 ```python
